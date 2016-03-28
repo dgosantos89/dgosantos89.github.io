@@ -6,7 +6,7 @@ bio: 'A Man who travels the world eating noodles'
 external-image: false
 picture: 'assets/images/profile.jpg'
 
-url: https://dgosantos89.github.io
+url: http://dgosantos89.github.io
 # your url: http://USERNAME.github.io
 
 permalink: /:title/
@@ -30,7 +30,7 @@ youtube: myyoutube
 spotify: myspotify
 github: mygithub
 medium: medium
-email: myemail@gmail.com
+email: dgo.santos89@gmail.com
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
