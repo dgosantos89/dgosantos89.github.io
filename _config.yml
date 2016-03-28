@@ -1,10 +1,10 @@
 # main text of home
-name: John Doe
-bio: 'A Man who travels the world eating noodles'
+name: Diego Santos
+bio: 'Desenvolvedor com foco em Qualidade'
 
 # if it's an external image, update below for true
 external-image: false
-picture: 'assets/images/profile.jpg'
+picture: 'assets/images/foto.png'
 
 url: https://dgosantos89.github.io
 # your url: http://USERNAME.github.io
@@ -17,20 +17,20 @@ highlighter: rouge
 analytics-google: 'UA-MYANALYTICS'
 
 # if you don't want comments in your posts, set to false
-disqus: mydisqus
+#disqus: mydisqus
 
 # if you don't have any of social below, comment the line
-facebook: myfacebook
-twitter: mytwitter
+#facebook: myfacebook
+#twitter: mytwitter
 # google: mygoogle
 # instagram: myinstagram
 # pinterest: mypinterest
-# linkedin: mylinkedin
-youtube: myyoutube
-spotify: myspotify
-github: mygithub
+linkedin: dgosantos89
+# youtube: myyoutube
+# spotify: myspotify
+github: dgosantos89
 medium: medium
-email: myemail@gmail.com
+email: dgo.santos89+github@gmail.com
 
 # do you want a larger site? change the option below
 # options: [normal, large] | default: normal
@@ -46,7 +46,7 @@ projects: true
 
 # if you don't need "about" or "blog", comment them out below
 about: true
-blog: true
+#blog: true
 
 # do you want to show the "read time" of the posts?
 read-time: true
