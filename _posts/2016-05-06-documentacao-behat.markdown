@@ -10,6 +10,8 @@ blog: true
 star: true
 ---
 
+![Behat](https://dl.dropboxusercontent.com/u/282797/behat/behat.png)
+
 Documentação do Behat
 =====================
 
