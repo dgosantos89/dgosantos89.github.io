@@ -1,5 +1,5 @@
 ---
-title: "Documentação Behat"
+title: "Documentação do Behat"
 layout: post
 date: 2016-05-06 16:20
 tag:
