@@ -5,11 +5,7 @@ date: 2016-05-06 16:20
 tag:
 - Behat
 - Mink
-- Teste
-- PHP
-- BDD
 - Documentação
-- Funcional
 blog: true
 star: true
 ---
