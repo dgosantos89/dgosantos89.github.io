@@ -23,7 +23,7 @@ exemplos de como este programa deve ajudá-los, e você, para alcançar seus obj
 Por exemplo, imagine que você está prestes a criar o famoso comando UNIX `` ls``.
 Antes de começar, você vai ter uma conversa com seus stakeholders (usuários de UNIX) e eles poderiam dizer que mesmo que eles gostem muito do UNIX, eles precisam de uma maneira de ver todos os arquivos no diretório de trabalho atual. Você então tem um bate-papo vai-e-vem com eles sobre como eles vêem esta característica trabalhando e que você venha com o seu primeiro cenário (um nome alternativo, por exemplo, na metodologia BDD):
 
-.. code-block:: gherkin
+```gherkin
 
     # language: pt
     Funcionalidade: Comando de listagem
@@ -41,7 +41,7 @@ Antes de começar, você vai ter uma conversa com seus stakeholders (usuários d
           bar
           foo
           """
-
+```
 
 Se você é um stakeholder, esta é a sua prova de que os desenvolvedores entenderam exatamente como você quer que esse
 recurso funcione. Se você é um desenvolvedor, esta é a sua prova de que o stakeholder espera que você implemente este
