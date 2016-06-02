@@ -689,10 +689,10 @@ Parabéns! Você agora conhece tudo o que precisa para começar com o desenvolvi
 dirigido por testes e Behat. Daqui, vocẽ pode aprender mais sobre a sintaxe :doc: `Gherkin </guides/1.gherkin>`
 ou aprender como testar suas aplicações web usando Behat com Mink.
 
-_`Behavior Driven Development`: https://pt.wikipedia.org/wiki/Behavior_Driven_Development
-_`Mink`: https://github.com/behat/mink
-_`What's in a Story?`: http://blog.dannorth.net/whats-in-a-story/
-_`Cucumber`: http://cukes.info/
-_`Goutte`: https://github.com/fabpot/goutte
-_`PHPUnit`: http://phpunit.de
-_`Testando Aplicações Web com Mink`: https://github.com/behat/mink
+* _`Behavior Driven Development`: https://pt.wikipedia.org/wiki/Behavior_Driven_Development
+* _`Mink`: https://github.com/behat/mink
+* _`What's in a Story?`: http://blog.dannorth.net/whats-in-a-story/
+* _`Cucumber`: http://cukes.info/
+* _`Goutte`: https://github.com/fabpot/goutte
+* _`PHPUnit`: http://phpunit.de
+* _`Testando Aplicações Web com Mink`: https://github.com/behat/mink
