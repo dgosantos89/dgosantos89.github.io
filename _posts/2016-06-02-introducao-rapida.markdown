@@ -40,8 +40,9 @@ Então vamos escrever sua primeira user-story:
       A fim de comprar produtos
       Como um cliente
       Eu preciso colocar produtos do meu interesse no carrinho
+```
 
-.. nota::
+```note
 
     Esta é uma feature básica em Gherkin e esta é uma simples descrição 
     desta história. Cada feature inicia com este mesmo formato: uma
