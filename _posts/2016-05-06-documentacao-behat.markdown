@@ -65,7 +65,7 @@ Intro Rápida
 
 Para começar a ser um *Behat'er* em 30 minutos, basta apenas mergulhar no guia de início rápido e desfrutar!
 
-* [Building Domain Model](https://raw.githubusercontent.com/dgosantos89/dgosantos89.github.io/master/_posts/quick_intro_pt1)
+* [Intro Rápida](/introducao-rapida/)
 
 Guias
 -----
