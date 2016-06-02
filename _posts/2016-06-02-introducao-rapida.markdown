@@ -34,7 +34,6 @@ quais produtos eles têm interesse de comprar. Vocẽ precisa de um carrinho de 
 Então vamos escrever sua primeira user-story:
 
 ```gherkin
-
     # language: pt
     Funcionalidade: Carrinho de produtos
       A fim de comprar produtos
@@ -42,14 +41,11 @@ Então vamos escrever sua primeira user-story:
       Eu preciso colocar produtos do meu interesse no carrinho
 ```
 
-```note
-
     Esta é uma feature básica em Gherkin e esta é uma simples descrição 
     desta história. Cada feature inicia com este mesmo formato: uma
     linha com o título da feature, seguida por três linhas que descrevem
     os benefícios, o papel e o próprio recurso com qualquer quantidade de 
     linhas de descrição adicionais seguem depois.
-```
 
 Antes de nós começarmos a trabalhar nesta feature, nós precisamos preencher 
 uma promessa de user-story e ter uma conversa de verdade com nossos stakeholders 
@@ -58,7 +54,6 @@ o preço combinado do produto no carrinho, mas que o preço reflita o imposto (2
 e o valor do frete (que depende da soma total dos produtos):
 
 ```gherkin
-
     # language: pt
     Funcionalidade: Carrinho de produtos
       A fim de comprar produtos
@@ -81,7 +76,6 @@ de algum tempo, você vai levantar seus primeiros exemplos de comportamentos (no
 isto é chamado de *Cenários*):
 
 ```gherkin
-
     # language: pt
     Funcionalidade: Carrinho de produtos
       A fim de comprar produtos
@@ -114,23 +108,21 @@ isto é chamado de *Cenários*):
         E o valor total do carrinho deve ser de R$20
 ```
 
-    nota::
-
     Cada cenário sempre segue o mesmo formato básico:
 
-    ```gherkin
 
+```gherkin
         Cenário: Alguma descrição do cenário
           Dado algum contexto
           Quando algum evento
           Então resultado
-    ```
+```
     
     Cada parte do cenário - o *contexto*, o *evento*,  e o
     *resultado* - pode ser extendido pelo adicional da palavra chave ``E`` 
     ou ``Mas``:
 
-    ```gherkin
+```gherkin
 
         Cenário: Alguma descrição do cenário
           Dado algum contexto
@@ -140,7 +132,7 @@ isto é chamado de *Cenários*):
           Então o resultado
           E outro resultado
           Mas outro resultado
-    ```
+```
 
     Não há uma real diferença entre ``Então``, ``E`` ``Mas`` ou qualquer 
     outra palavra que inicie cada linha. Estas palavras chave são 
@@ -175,12 +167,8 @@ com a conversa de vocês) também.
 É isso ai! O Behat pode ser usado para automatizar qualquer coisa, inclusive relacionadas a
 funcionalidades web via `Mink`_ library.
 
-    nota::
-
     Se você quer aprender mais sobre a filosofia do "Desenvolvimento 
     Dirigido por comportamento" sobre a sua aplicação, veja `What's in a Story?`_
-
-    nota::
 
     Behat estava profundamente inspirado pelo projeto em Ruby `Cucumber`_. Desde a v3.0,
     Behat é considerado uma implementação oficial do Cucumber em PHP e faz parte da grande
@@ -200,16 +188,16 @@ você agora, ele será capaz de atualizar facilmente para a última versão mais
 for lançada. Se você ainda não tem o Composer, veja `a documentação do Composer <https://getcomposer.org/download/>`_ 
 para instruções. Depois disto, basta ir ao diretório do projeto (ou criar um novo) e rodar:
 
-.. code-block:: bash
-
+```bash
     $ php composer.phar require --dev behat/behat=~3.0.4
+```
 
 Então vocẽ estará apto a checar a versão instalada do Behat:
 
-.. code-block:: bash
-
+```bash
     $ vendor/bin/behat -V
-    
+```    
+
 Método #2 - PHAR (um caminho fácil)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -218,9 +206,9 @@ Um caminho fácil para instalar o Behat é pegar a última ``behat.phar`` na
 de fazer o download de uma versão ``3+``. Depois de baixar isto, basta colocá-lo 
 no diretório do seu projeto (ou criar um novo) e checar a versão instalada usando:
 
-.. code-block:: bash
-
+```bash
     $ php behat.phar -V
+```
 
 Desenvolvendo
 -------------
@@ -235,11 +223,9 @@ Por padrão, Behat vem com uma suite ``default``, que diz ao Behat para procurar
 features no diretório ``features/`` e os teste usando a classe ``FeatureContext``.
 Vamos inicializar esta suite:
 
-.. code-block:: bash
-
+```bash
     $ vendor/bin/behat --init
-
-.. nota::
+```
 
     Se você instalou o Behat via PHAR, use ``php behat.phar`` ao invés de
     ``vendor/bin/behat`` no resto deste artigo.
@@ -253,9 +239,9 @@ Executando o Behat
 
 Eu acho que nós estamos prontos para ver o Behat em ação! Vamos rodar isto:
 
-.. code-block:: bash
-
+```bash
     $ vendor/bin/behat
+```
 
 Vocẽ deve ver que o Behat reconheceu que você tem 3 cenários. o Behat deve também
 contar a você que na sua classe ``FeatureContext`` faltam passos e propor trechos 
@@ -263,8 +249,7 @@ para etapas para você. ``FeatureContext`` é seu ambiente de teste. É um objet
 através do qual você descreve como você deve testar sua aplicação através de suas 
 features. Isso foi gerado através do comando ``--init`` e agora se parece com isso:
 
-.. code-block:: php
-
+```php
     // features/bootstrap/FeatureContext.php
 
     use Behat\Behat\Context\SnippetAcceptingContext;
@@ -280,6 +265,7 @@ features. Isso foi gerado através do comando ``--init`` e agora se parece com i
         {
         }
     }
+```
 
 Definindo Steps
 ~~~~~~~~~~~~~~~
@@ -290,8 +276,7 @@ Diga a ele. Você escreve em PHP dentro da sua classe de contexto (``FeatureCont
 no seu caso) e diz ao Behat que este código representa um passo específico do cenário 
 (através de uma anotação com um padrão):
 
-.. code-block:: php
-
+```php
     /**
      * @Given que exista um :arg1, que custe R$:arg2
      */
@@ -299,9 +284,7 @@ no seu caso) e diz ao Behat que este código representa um passo específico do 
     {
         throw new PendingException();
     }
-
-
-.. nota::
+```
 
     ``/** ... */`` é uma sintaxe especial em PHP chamada de doc-block.
     Isto é detectável em tempo de execução e usado por diferentes frameworks 
@@ -314,19 +297,19 @@ que este método em particular deve ser executado sempre que o Behat ver um step
 que se pareça com ``... que exista um ..., que custe R$...``. Este padrão 
 combina qualquer um dos seguintes steps:
 
-.. code-block:: gherkin
+```gherkin
 
     Dado que exista um "Sabre de luz do Lorde Sith", que custe R$5
     Quando que exista um "Sabre de luz do Lorde Sith", que custe R$10
     Então que exista um "Sabre de luz do Anakin", que custe R$10
     E que exista um "Sabre de luz", que custe R$2
     Mas que exista um "Sabre de luz", que custe R$25
+```
 
 Não somente estes, mas o Behat irá capturar tokens (palavras iniciadas com ``:``, 
 por exemplo ``:arg1``) a partir do step e passar seu valor para o método como argumentos:
 
-.. code-block:: php
-
+```php
     // Dado que exista um "Sabre de luz do Lorde Sith", que custe R$5
     $context->queExistaUmQueCusteR('Sabre de luz do Lorde Sith', '5');
 
@@ -335,13 +318,12 @@ por exemplo ``:arg1``) a partir do step e passar seu valor para o método como a
 
     // Mas que exista um "Sabre de luz", que custe R$25
     $context->queExistaUmQueCusteR('Sabre de luz', '25');
-
-.. nota::
+```
 
     Se você precisa definir algoritmos de correspondência mais complexos, 
     você também pode usar expressões regulares:
 
-    .. code-block:: php
+```php
 
         /**
          * @Given /que exista um? \"([^\"]+)\", que custe R$([\d\.]+)/
@@ -350,13 +332,13 @@ por exemplo ``:arg1``) a partir do step e passar seu valor para o método como a
         {
             throw new PendingException();
         }
+```
 
 Estes padrões podem ser muito poderosos, mas ao mesmo tempo, escreve-los por todos steps 
 possíveis manualmente pode ser extremamente tedioso e chato. É por isso que o Behat faz
 isto para você. Relembre quando você executou anteriormente ``vendor/bin/behat`` você teve:
 
-.. code-block:: text
-
+```text
     --- FeatureContext has missing steps. Define them with these snippets:
 
         /**
@@ -366,21 +348,21 @@ isto para você. Relembre quando você executou anteriormente ``vendor/bin/behat
         {
             throw new PendingException();
         }
+```
 
 O Behat gera automaticamente trechos para etapas que faltam e tudo que você precisa 
 para os copiar e colar em sua classe context. Ou há ainda um caminho mais fácil - pasta rodar:
 
-.. code-block:: bash
-
+```bash
     $ vendor/bin/behat --dry-run --append-snippets
+```
 
 E o Behat vai automaticamente acrescentar todos os métodos das etapas que faltam em
 sua classe ``FeatureContext``. Como isso é legal?
 
 Se vocẽ executou `--append-snippets``, sua ``FeatureContext`` deve se parecer com:
 
-.. code-block:: php
-
+```php
     // features/bootstrap/FeatureContext.php
 
     use Behat\Behat\Tester\Exception\PendingException;
@@ -422,8 +404,7 @@ Se vocẽ executou `--append-snippets``, sua ``FeatureContext`` deve se parecer 
             throw new PendingException();
         }
     }
-
-.. nota::
+```
 
     Nós removemos o construtor e agrupamos ``Eu devo ter :arg1 produto no carrinho`` e
     ``Eu devo ter :arg1 produtos no carrinho`` em um ``Eu devo ter :arg1 produto(s) no carrinho``
@@ -442,8 +423,7 @@ No caso do Behat, você já tem casos de teste definidos (step definitions em su
 e a unica coisa que está faltando é o melhor código da aplicação que poderíamos chegar para cumprir 
 o nosso cenário. Algo assim:
 
-.. code-block:: php
-
+```php
     // features/bootstrap/FeatureContext.php
 
     use Behat\Behat\Tester\Exception\PendingException;
@@ -500,6 +480,7 @@ o nosso cenário. Algo assim:
             );
         }
     }
+```
 
 Como você pode ver, afim de implementar e testar nossa aplicação, nós introduzimos 2 objetos - 
 ``Prateleira`` and ``Carrinho``. O primeiro responsavel por armazenar produtos e seus preços, 
@@ -507,31 +488,29 @@ o segundo é responsável pela representação do carrinho do nosso cliente. Atr
 apropriado nós declaramos produtos' preços e adicionamos ao carrinho. Nós então comparamos o estado 
 de nosso objeto ``Carrinho`` com a nossa expectativa usando asserções do PHPUnit.
 
-.. nota::
-
     O Behat não vem com uma ferramenta própria de asserção, mas você pode usar qualquer 
     outra ferramenta correta de asserção. Uma ferramenta de asserção correta é uma biblioteca 
     cujas afirmações lançam excessões em caso de falha. Por exemplo, se você está familiarizado 
     com o PHPUnit você pode usar as asserções dele no Behat instalando via composer:
 
-    .. code-block:: bash
-
+```bash
         $ php composer.phar require --dev phpunit/phpunit='~4.1.0'
+```
 
     E então simplesmente usar as asserções em seus steps:
 
-    .. code-block:: php
-
+```php
         PHPUnit_Framework_Assert::assertCount(
             intval($count),
             $this->carrinho
         );
+```
 
 Agora vamos tentar executar seu teste funcional:
 
-.. code-block:: bash
-
+```bash
     $ vendor/bin/behat
+```
 
 Você deve ver o início da feature e em seguida um erro dizendo que a classe 
 ``Prateleira`` não existe. Isso significa que estamos prontos para começar a 
@@ -557,29 +536,27 @@ a ferramenta e seguir as instruções na ordem para escrever seu código de prod
 
 Vamos começar! Rode:
 
-.. code-block:: bash
-
+```bash
     $ vendor/bin/behat
+```
 
 O Behat vai tentar testar a sua aplicação com o ``FeatureContext`` mas vai falhar 
 logo, exibindo algum evento como este em sua tela:
 
-.. code-block:: text
-
+```text
     Fatal error: Class 'Prateleira' not found
+```
 
 Agora nosso trabalho é reinterpretar esta frase em uma instrução executável. Como 
 "Criar a classe ``Prateleira``". Vamos criar isto em ``features/bootstrap``:
 
-.. code-block:: php
-
+```php
     // features/bootstrap/Shelf.php
 
     final class Prateleira
     {
     }
-
-.. nota::
+```
 
     Nós colocamos a classe ``Prateleira`` em ``features/bootstrap/Prateleira.php`` pois 
     ``features/bootstrap`` é um diretório de carregamento automático para o Behat. O Behat
@@ -589,44 +566,43 @@ Agora nosso trabalho é reinterpretar esta frase em uma instrução executável.
 
 Vamos executar o Behat novamente:
 
-.. code-block:: bash
-
+```bash
     $ vendor/bin/behat
+```
 
 Nós vamos ter uma mensagem diferente em nossa tela:
 
-.. code-block:: text
-
+```text
     Fatal error: Class 'Carrinho' not found
+```
 
 Ótimo, nós estamos progredindo! Reinterpretando a mensagem como "Criar a classe ``Carrinho``".
 Vamos seguir nossa nova instrução:
 
-.. code-block:: php
-
+```php
     // features/bootstrap/Carrinho.php
 
     final class Carrinho
     {
     }
+```
 
 Rode o Behat novamente:
 
-.. code-block:: bash
-
+```bash
     $> vendor/bin/behat
+```
 
 Maravilha! Outra "instrução":
 
-.. code-block:: text
-
+```text
     Call to undefined method Prateleira::colocaValorProduto()
+```
 
 Seguindo estas instruções passo-a-passo você vai terminar com uma classe ``Prateleira`` 
 parecida com esta:
 
-.. code-block:: php
-
+```php
     // features/bootstrap/Prateleira.php
 
     final class Prateleira
@@ -643,11 +619,11 @@ parecida com esta:
             return $this->valores[$produto];
         }
     }
+```
 
 E uma classe ``Carrinho`` parecida com esta:
 
-.. code-block:: php
-
+```php
     // features/bootstrap/Carrinho.php
 
     final class Carrinho implements \Countable
@@ -679,19 +655,18 @@ E uma classe ``Carrinho`` parecida com esta:
             return contador($this->produtos);
         }
     }
+```
 
 Execute o Behat novamente:
 
-.. code-block:: bash
-
+```bash
     $ vendor/bin/behat
+```
 
 Todos os cenários devem passar agora! Parabéns, você quase terminou a sua primeira feature. 
 O último passo é *refatorar*. Olhe para as classes ``Carrinho`` e ``Prateleira`` e tente 
 achar um caminho para fazer um código mais limpo, fácil de ler e conciso.
 
-.. dica::
-    
     Eu recomendaria iniciar pelo método ``Carrinho::pegarValorTotal()`` e
     extrair o calculo do imposto e do frete para métodos privados.
 
