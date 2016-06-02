@@ -33,7 +33,7 @@ de comprar produtos. Mas antes de comprar algo, os clientes devem poder informar
 quais produtos eles têm interesse de comprar. Vocẽ precisa de um carrinho de produtos.
 Então vamos escrever sua primeira user-story:
 
-.. code-block:: gherkin
+```gherkin
 
     # language: pt
     Funcionalidade: Carrinho de produtos
@@ -48,6 +48,7 @@ Então vamos escrever sua primeira user-story:
     linha com o título da feature, seguida por três linhas que descrevem
     os benefícios, o papel e o próprio recurso com qualquer quantidade de 
     linhas de descrição adicionais seguem depois.
+```
 
 Antes de nós começarmos a trabalhar nesta feature, nós precisamos preencher 
 uma promessa de user-story e ter uma conversa de verdade com nossos stakeholders 
@@ -55,7 +56,7 @@ da área de negócios. Eles podem dizer que eles querem que os clientes vejam
 o preço combinado do produto no carrinho, mas que o preço reflita o imposto (20%) 
 e o valor do frete (que depende da soma total dos produtos):
 
-.. code-block:: gherkin
+```gherkin
 
     # language: pt
     Funcionalidade: Carrinho de produtos
@@ -67,6 +68,7 @@ e o valor do frete (que depende da soma total dos produtos):
       - O imposto é de 20%
       - O frete para um carrinho de compras até R$10 é R$3
       - O frete para um carrinho de compras maior que R$10 é R$2
+```
 
 Então como você pode ver, está ficando complicado (ambíguo, pelo menos)
 falar sobre está feature, em termos de *regras*. O que você entende por 
@@ -77,7 +79,7 @@ dos exemplos atuais de um *cliente* adicionando produtos ao carrinho. Depois
 de algum tempo, você vai levantar seus primeiros exemplos de comportamentos (no BDD 
 isto é chamado de *Cenários*):
 
-.. code-block:: gherkin
+```gherkin
 
     # language: pt
     Funcionalidade: Carrinho de produtos
@@ -109,23 +111,25 @@ isto é chamado de *Cenários*):
         E Eu adicionar o "Sabre de luz Jedi" ao carrinho
         Então Eu devo ter 2 products no carrinho
         E o valor total do carrinho deve ser de R$20
+```
 
-.. nota::
+    nota::
 
     Cada cenário sempre segue o mesmo formato básico:
 
-    .. code-block:: gherkin
+    ```gherkin
 
         Cenário: Alguma descrição do cenário
           Dado algum contexto
           Quando algum evento
           Então resultado
-
+    ```
+    
     Cada parte do cenário - o *contexto*, o *evento*,  e o
     *resultado* - pode ser extendido pelo adicional da palavra chave ``E`` 
     ou ``Mas``:
 
-    .. code-block:: gherkin
+    ```gherkin
 
         Cenário: Alguma descrição do cenário
           Dado algum contexto
@@ -135,6 +139,7 @@ isto é chamado de *Cenários*):
           Então o resultado
           E outro resultado
           Mas outro resultado
+    ```
 
     Não há uma real diferença entre ``Então``, ``E`` ``Mas`` ou qualquer 
     outra palavra que inicie cada linha. Estas palavras chave são 
@@ -169,12 +174,12 @@ com a conversa de vocês) também.
 É isso ai! O Behat pode ser usado para automatizar qualquer coisa, inclusive relacionadas a
 funcionalidades web via `Mink`_ library.
 
-.. nota::
+    nota::
 
     Se você quer aprender mais sobre a filosofia do "Desenvolvimento 
     Dirigido por comportamento" sobre a sua aplicação, veja `What's in a Story?`_
 
-.. nota::
+    nota::
 
     Behat estava profundamente inspirado pelo projeto em Ruby `Cucumber`_. Desde a v3.0,
     Behat é considerado uma implementação oficial do Cucumber em PHP e faz parte da grande
