@@ -68,21 +68,21 @@ Guias
 
 Aprenda Behat com os seguintes guias:
 
-    * guides/1.gherkin
-    * guides/2.definitions
-    * guides/3.hooks
-    * guides/4.contexts
-    * guides/5.suites
-    * guides/6.profiles
-    * guides/7.run
+* guides/1.gherkin
+* guides/2.definitions
+* guides/3.hooks
+* guides/4.contexts
+* guides/5.suites
+* guides/6.profiles
+* guides/7.run
 
 Cookbook
 --------
 
 Aprenda soluções específicas para necessidades específicas:
 
-    * cookbooks/1.symfony2_integration
-    * cookbooks/context_communication
+* cookbooks/1.symfony2_integration
+* cookbooks/context_communication
 
 
 Mais sobre BDD
