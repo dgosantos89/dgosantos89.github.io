@@ -179,8 +179,7 @@ Instalação
 
 Antes de você começar, garanta que você tem uma versão superior a 5.3.3 do PHP instalada.
 
-Método #1 - Composer (o recomendado)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Método #1 - Composer (o recomendado)
 
 O caminho oficial para instalar o Behat é através do Composer. Composer é um
 gerenciador de pacotes para PHP. Ele não irá lhe ser útil somente para instalar o Behat para 
@@ -198,8 +197,7 @@ Então vocẽ estará apto a checar a versão instalada do Behat:
     $ vendor/bin/behat -V
 ```    
 
-Método #2 - PHAR (um caminho fácil)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+### Método #2 - PHAR (um caminho fácil)
 
 Um caminho fácil para instalar o Behat é pegar a última ``behat.phar`` na 
 `página de download <https://github.com/Behat/Behat/releases>`_. Certifique-se
@@ -234,8 +232,7 @@ O comando ``--init`` diz ao Behat para prover para você com coisas faltando
 para começar a testar sua feature. Em nosso caso - é apenas uma classe ``FeatureContext`` 
 no arquivo ``features/bootstrap/FeatureContext.php``.
 
-Executando o Behat
-~~~~~~~~~~~~~~~~~~
+### Executando o Behat
 
 Eu acho que nós estamos prontos para ver o Behat em ação! Vamos rodar isto:
 
@@ -267,8 +264,7 @@ features. Isso foi gerado através do comando ``--init`` e agora se parece com i
     }
 ```
 
-Definindo Steps
-~~~~~~~~~~~~~~~
+### Definindo Steps
 
 Finalmente, nós chegamos a parte de automação. Como é que o Behat sabe o que fazer 
 quando vê  ``Dado que exista um "Sabre de luz do Lorde Sith", que custe R$5``? 
@@ -298,7 +294,6 @@ que se pareça com ``... que exista um ..., que custe R$...``. Este padrão
 combina qualquer um dos seguintes steps:
 
 ```gherkin
-
     Dado que exista um "Sabre de luz do Lorde Sith", que custe R$5
     Quando que exista um "Sabre de luz do Lorde Sith", que custe R$10
     Então que exista um "Sabre de luz do Anakin", que custe R$10
@@ -324,7 +319,6 @@ por exemplo ``:arg1``) a partir do step e passar seu valor para o método como a
     você também pode usar expressões regulares:
 
 ```php
-
         /**
          * @Given /que exista um? \"([^\"]+)\", que custe R$([\d\.]+)/
          */
@@ -338,7 +332,7 @@ Estes padrões podem ser muito poderosos, mas ao mesmo tempo, escreve-los por to
 possíveis manualmente pode ser extremamente tedioso e chato. É por isso que o Behat faz
 isto para você. Relembre quando você executou anteriormente ``vendor/bin/behat`` você teve:
 
-```text
+```php
     --- FeatureContext has missing steps. Define them with these snippets:
 
         /**
@@ -409,8 +403,7 @@ Se vocẽ executou `--append-snippets``, sua ``FeatureContext`` deve se parecer 
     Nós removemos o construtor e agrupamos ``Eu devo ter :arg1 produto no carrinho`` e
     ``Eu devo ter :arg1 produtos no carrinho`` em um ``Eu devo ter :arg1 produto(s) no carrinho``
 
-Automating Steps
-~~~~~~~~~~~~~~~~
+### Automatizando Steps
 
 Agora finalmente é o tempo de começar a implementar nossa feature do carrinho de compras.
 A abordagem quando você usa testes para dirigir o desenvolvimento da sua aplicação é chamada 
@@ -672,16 +665,16 @@ achar um caminho para fazer um código mais limpo, fácil de ler e conciso.
 
 Depois da refatoração pronta, vocẽ terá:
 
-#. Um código óbvio e claramente concebido que faz exatamente o que deveria fazer 
+.# Um código óbvio e claramente concebido que faz exatamente o que deveria fazer 
    sem funcionalidades que não foram solicitadas pelos usuários.
 
-#. Um conjunto de testes de regressão que irá ajudá-lo a ter confiança em seu código daqui para frente.
+.# Um conjunto de testes de regressão que irá ajudá-lo a ter confiança em seu código daqui para frente.
 
-#. Uma documentação viva do comportaento do seu código, 
+.# Uma documentação viva do comportaento do seu código, 
 
-#. Documentação viva do comportamento do seu código que vai viver, evoluir e morrer em conjunto com o seu código.
+.# Documentação viva do comportamento do seu código que vai viver, evoluir e morrer em conjunto com o seu código.
 
-#. Um incrível nível de confiança em seu código. Não só você está confiante agora que ele faz exatamente o que é 
+.# Um incrível nível de confiança em seu código. Não só você está confiante agora que ele faz exatamente o que é 
    suposto fazer, você está confiante de que ele faz isso por entregar valor para os usuários finais (clientes, 
    no nosso caso).
 
@@ -696,10 +689,10 @@ Parabéns! Você agora conhece tudo o que precisa para começar com o desenvolvi
 dirigido por testes e Behat. Daqui, vocẽ pode aprender mais sobre a sintaxe :doc: `Gherkin </guides/1.gherkin>`
 ou aprender como testar suas aplicações web usando Behat com Mink.
 
-.. _`Behavior Driven Development`: https://pt.wikipedia.org/wiki/Behavior_Driven_Development
-.. _`Mink`: https://github.com/behat/mink
-.. _`What's in a Story?`: http://blog.dannorth.net/whats-in-a-story/
-.. _`Cucumber`: http://cukes.info/
-.. _`Goutte`: https://github.com/fabpot/goutte
-.. _`PHPUnit`: http://phpunit.de
-.. _`Testando Aplicações Web com Mink`: https://github.com/behat/mink
+_`Behavior Driven Development`: https://pt.wikipedia.org/wiki/Behavior_Driven_Development
+_`Mink`: https://github.com/behat/mink
+_`What's in a Story?`: http://blog.dannorth.net/whats-in-a-story/
+_`Cucumber`: http://cukes.info/
+_`Goutte`: https://github.com/fabpot/goutte
+_`PHPUnit`: http://phpunit.de
+_`Testando Aplicações Web com Mink`: https://github.com/behat/mink
