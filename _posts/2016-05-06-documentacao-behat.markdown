@@ -24,12 +24,11 @@ Por exemplo, imagine que você está prestes a criar o famoso comando UNIX `` ls
 Antes de começar, você vai ter uma conversa com seus stakeholders (usuários de UNIX) e eles poderiam dizer que mesmo que eles gostem muito do UNIX, eles precisam de uma maneira de ver todos os arquivos no diretório de trabalho atual. Você então tem um bate-papo vai-e-vem com eles sobre como eles vêem esta característica trabalhando e que você venha com o seu primeiro cenário (um nome alternativo, por exemplo, na metodologia BDD):
 
 ```gherkin
-
     # language: pt
     Funcionalidade: Comando de listagem
       A fim de alterar a estrutura da pasta em que estou atualmente
       Como um usuário de UNIX
-      Eu preciso ser capaz de ver os arquivos e pastas disponíveis atualmente lá
+      Eu preciso ser capaz de ver arquivos e pastas disponíveis atualmente
 
       Cenário: Listando dois arquivos em um diretório
         Dado que estou em um diretório "teste"
