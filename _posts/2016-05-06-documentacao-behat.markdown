@@ -65,7 +65,7 @@ Intro Rápida
 
 Para começar a ser um *Behat'er* em 30 minutos, basta apenas mergulhar no guia de início rápido e desfrutar!
 
-* [Intro Rápida](/introducao-rapida/)
+* [Intro Rápida](https://dgosantos89.github.io/introducao-rapida/)
 
 Guias
 -----
