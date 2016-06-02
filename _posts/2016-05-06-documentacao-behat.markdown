@@ -51,13 +51,10 @@ Então, como um desenvolvedor seu trabalho estará terminado tão logo você fa�
 Você provavelmente já ouviu sobre a prática moderna de desenvolvimento chamada TDD, onde você escreve testes para o seu
 código antes, não depois, do código. Bem, BDD é parecido, exceto pelo fato de que você não precisa começar com um teste - seus *cenários* são seus testes. Isto é exatamente o que o Behat faz! Como você vai ver, Behat é fácil de aprender, rápido de usar e vai trazer a diversão de volta para os seus testes.
 
-``` 
-    Nota:
+    Behat foi fortemente inspirado no projeto em Ruby `Cucumber`. 
+    Desde v3.0, o Behat é considerado uma implementação oficial 
+    de Cucumber em PHP e é parte da grande família de ferramentas de BDD.
 
-    Behat foi fortemente inspirado no projeto em Ruby `Cucumber`. Desde v3.0,
-    Behat é considerada uma implementação oficial de Cucumber em PHP e é parte
-    da grande família de ferramentas de BDD.
-```
 
 Intro Rápida
 ------------
