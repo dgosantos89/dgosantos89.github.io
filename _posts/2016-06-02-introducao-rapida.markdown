@@ -6,8 +6,8 @@ tag:
 - Behat
 - Mink
 - Introdução
-blog: true
-star: true
+blog: false
+star: false
 ---
 
 Introdução Rápida
