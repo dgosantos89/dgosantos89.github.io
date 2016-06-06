@@ -68,9 +68,10 @@ Vamos analizar o exemplo:
     na seção "[Funcionalidades](#funcionalidades)".
 
 * As próximas três linhas (``A fim de ...``, ``Como um ...``, ``Eu quero...``)
-    dão um contexto fornecem um contexto para as pessoas que lêem o seu recurso 
-    e descreve o valor do negócio derivada da inclusão do recurso em seu software.
-    Estas linhas não são analisadas pelo Behat e não requerem uma estrutura.
+    fornecem contexto para as pessoas que lêem a sua funcionalidade e 
+    descrevem o valor do negócio derivado da inclusão do recurso em 
+    seu software. Estas linhas não são analisadas pelo Behat e não 
+    tem uma estrutura exigida.
     
 * ``Cenário: Uma determinada situação de negócios`` inicia o cenário e
     contêm uma descrição do cenário. Aprenda mais sobre cenários na seção 
@@ -93,7 +94,7 @@ Funcionalidades
 Todos arquivos ``*.feature`` convencionalmente consistem em uma funcionalidade 
 única. Linhas iniciando com a palavra chave ``Funcionalidade:`` (ou o seu 
 equivalente) seguido de três linhas identadas iniciam uma funcionalidade. 
-Usualmente uma feature contém uma lista de cenários. Você pode escrever 
+Usualmente uma funcionalidade contém uma lista de cenários. Você pode escrever 
 qualquer coisa que você precise até o primeiro cenário, que inicia com 
 ``Cenário:`` (ou o seu equivalente) em uma nova linha. Você pode usar
 [tags](#tags) para agrupar funcionalidades e cenários, independente da estrutura
@@ -119,7 +120,7 @@ Aqui temos um exemplo:
         Então eu deveria ser servido de um café
 ```
 
-Além do básico [Cenários](#cenrios), uma feature pode conter [Esquema do Cenário](#esquema-do-cenrio)
+Além do básico [Cenário](#cenrios), uma feature pode conter [Esquema do Cenário](#esquema-do-cenrio)
 e [Contexto](#contexto).
 
 Cenários
@@ -128,7 +129,7 @@ Cenários
 Cenários são uma das principais estruturas do Gherkin. Todo cenário deve 
 iniciar com a palavra chave ``Cenário:`` (ou palavra chave equivalente),
 opcionalmente seguido de um título de cenário. Cada funcionalidade pode 
-ter um ou mais cenários e todo cenário consiste em um ou mais [etapa](#etapas).
+ter um ou mais cenários e todo cenário consiste em uma ou mais [etapas](#etapas).
 
 Os cenários seguintes tem cada um 3 etapas:
 
@@ -140,7 +141,7 @@ Os cenários seguintes tem cada um 3 etapas:
 
     Cenário: Wilson falha ao postar algo no blog de outra pessoa
       Dado que eu estou logado como Wilson
-      Quando eu tento postar "Greg esbraveja contra impostos"
+      Quando eu tento postar em "Greg esbraveja contra impostos"
       Então eu devo ver "Hey! Este não é o seu blog!"
 
     Cenário: Greg posta em blog cliente
@@ -156,18 +157,18 @@ Copiar e colar cenários para usar diferentes valores pode ser muito
 tedioso e repetitivo:
 
 ```gherkin
-    Cenário: Comer 5 em cada 12
+    Cenário: Comer 5 de 12
       Dado que tenho 12 pepinos
       Quando eu comer 5 peninos
       Então eu devo ter 7 pepinos
 
-    Cenário: Comer 5 em cada 20
+    Cenário: Comer 5 de 20
       Dado que tenho 20 pepinos
       Quando eu comer 5 peninos
       Então eu devo ter 15 pepinos    
 ```
 
-Os `Esquemas do Cenários` nos permitem formular estes exemplos com maior precisão 
+Os `Esquemas do Cenário` nos permitem formular estes exemplos com maior precisão 
 através da utilização de um modelo com espaços reservados:
 
 ```gherkin
@@ -188,35 +189,32 @@ na seção de exemplos abaixo dela (exceto para a primeira linha
 que é o cabeçalho).
 
 O Esquema do Cenário utiliza espaços reservados, que estão
-contidos ``< >`` nas etapas de saída do Cenário. Por exemplo:
+contidos em "``<    >``" nas etapas de saída do Cenário. Por exemplo:
 
 ```gherkin
     Dado <Eu sou um espaço reservado e estou ok>
 ```
 
 Pense em um espaço reservado como uma variável. Isto pode ser substituido
-por um valor real das linhas da tabela de ``Exemplos:``, onde o texto 
-entre o ângulo de espaço em reservado corresponde ao que o cabeçalho da
+por um valor real das linhas da tabela de "``Exemplos:``", onde o texto 
+entre o sinal de maior e menor corresponde ao que o cabeçalho da
 coluna da tabela. O valor substituido pelo espaço reservado muda a cada 
 execução subsequente do Esquema do Cenário, até que o fim da tabela de
 ``Exemplos`` seja alcançado.
 
 
-Vocẽ também pode usar os espaços reservados em [Argumentos Multilineos](#argumentos-multilineos).
+Você também pode usar os espaços reservados em [Argumentos Multilineos](#argumentos-multilineos).
 
-
-```
-    Sua etapa de definições nunca terá que coincidir com o próprio texto 
-    do espaço reservado, mas sim os valores terão que substituir o 
-    espaço reservado.
-```
+> Sua etapa de definições nunca terá que coincidir com o próprio texto 
+> do espaço reservado, mas sim os valores terão que substituir o 
+> espaço reservado.
 
 Então quando executamos a primeira linha do nosso exemplo:
 
 ```gherkin
     Esquema do Cenário: Comer
       Dado que temos <antes> pepinos
-      Quando eu comer <come> pepino
+      Quando eu comer <come> pepinos
       Então teremos <depois> pepinos
 
       Exemplos:
@@ -269,12 +267,12 @@ dos seus hooks ``BeforeScenario`` (:doc:`/guides/3.hooks`).
 Etapas
 ------
 
-[Funcionalidades](#funcionalidades) consiste em etapas, também conhecido como [Dado](#dado), 
-[Quando](#quando) e `[Então](#ento).
+[Funcionalidade](#funcionalidades) consiste em etapas, também conhecido como [Dado](#dado), 
+[Quando](#quando) e [Então](#ento).
 
 O Behat não tem uma distinção técnica entre estes três tipos de etapas.
 Contudo, nós recomendamos fortemente que você faça! Estas palavras
-foram cuidadosamente selecionadas para o seus propósito e você deve
+foram cuidadosamente selecionadas para o seu propósito e você deve
 saber que o objetivo é entrar na mentalidade BDD.
 
 Robert C. Martin escreveu um 
@@ -283,42 +281,32 @@ sobre o conceito de BDD Dado-Quando-Então onde ele pensa neles como uma
 máquina de estados finitos.
 
 Dado
-~~~~
+----
 
 O propósito da etapa **Dado** é **colocar o sistema em um estado conhecido** 
-antes do usuário (ou sistema externo) iniciar a interalção com o sistema
+antes do usuário (ou sistema externo) iniciar a interação com o sistema
 (na etapa Quando). Evite falar sobre a interação em Dado. Se você trabalhou
 com casos de uso, Dado é a sua pré condição.
 
-```
 Exemplos de Dado
 
-    Dois bons exemplos do uso de **Dado** são:
+Dois bons exemplos do uso de **Dado** são:
 
-    * Crear 
-
-    * Para criar registros (instâncias de modelo) ou de configuração do 
-    banco de dados:
-```
+* Para criar registros (instâncias de modelo) ou de configuração do banco de dados:
 
 ```gherkin
           Dado que não tenha usuários no site
           Dado que o banco de dados esteja limpo
 ```
 
-    * Autenticar um usuário (uma exceção para )
-
-    * Autenticar um usuário (uma exceção a recomendação não-interação 
-    Coisas que "aconteceram antes" estão ok.):
+* Autenticar um usuário (uma exceção a recomendação não-interação. Coisas que "aconteceram antes" estão ok):
 
 ```gherkin
           Dado que eu esteja logado como "Everzet"
 ```
 
-```
-    Tudo bem chamar a camada de "dentro" da camada de interface do 
-    usuário aqui (em Symfony: falar com os modelos).
-```
+> Tudo bem chamar a camada de "dentro" da camada de interface do 
+> usuário aqui (em Symfony: falar com os modelos).
 
 Usando Dado como massa de dados:
 
@@ -327,9 +315,7 @@ de uma etapa Dado com o argumento [tabela](#tabelas) para configurar registros
 em vez de objetos. Neste caminho você pode ler todos os cenários em um
 único lugar e fazer sentido fora dele sem ter que saltar entre arquivos: 
 
-
 ```gherkin
-
         Dado estes usuários:
         | username | password | email               |
         | everzet  | 123456   | everzet@knplabs.com |
@@ -337,59 +323,54 @@ em vez de objetos. Neste caminho você pode ler todos os cenários em um
 ```
 
 Quando
-~~~~~~
+------
 
 O propósito da etapa **Quando** é **descrever a ação chave** que o 
 usuário executa (ou, usando a metáfora de Robert C. Martin, a transição
 de estado).
 
-```
 Exemplos de Quando
 
-    Dois bons exemplos do uso de **Quando** são:
+Dois bons exemplos do uso de **Quando** são:
     
-    * Interagir com uma página web (a biblioteca Mink lhe dá muitas etapas
-    ``Quando`` web-amigáveis fora da caixa):
-```
-```gherkin
-          Quando eu estiver em "/alguma/pagina"
-          Quando eu preencho o campo "username" com "everzet"
-          Quando eu preencho o campo "password" com "123456"
-          Quando eu clico em "login"
-```
-
-    * Interagir com alguma biblioteca CLI (chama comandos e grava saída):
+* Interagir com uma página web (a biblioteca Mink lhe dá muitas etapas web-amigáveis ``Quando`` fora da caixa):
 
 ```gherkin
+      Quando eu estiver em "/alguma/pagina"
+      Quando eu preencho o campo "username" com "everzet"
+      Quando eu preencho o campo "password" com "123456"
+      Quando eu clico em "login"
+```
 
-          Quando eu chamo "ls -la"
+* Interagir com alguma biblioteca CLI (chama comandos e grava saída):
+
+```gherkin
+      Quando eu chamo "ls -la"
 ```
 
 Então
-~~~~~
+-----
 
 O propósito da etapa **Então** é **observar saídas**. As observações 
 devem estar relacionadas com o valor/benefício de negócios na sua 
 descrição da funcionalidade. As observações devem inspecionar a saída 
 do sistema (um relatório, interface de usuário, mensagem, saída de 
-comando) e não alguma coisa profundamente enterrado dentro dela 
+comando) e não alguma coisa profundamente enterrada dentro dela 
 (que não tem valor de negócios e ao invés disso faz parte da 
 implementação).
 
-```
 Exemplos de Então
 
-    Dois bons exemplos do uso de **Então** são:
+Dois bons exemplos do uso de **Então** são:
 
-    * Verificar algo relacionado ao Dado + Quando está (ou não) na saída:
-```
+* Verificar algo relacionado ao Dado + Quando está (ou não) na saída:
+
 ```gherkin
-
-          Quando eu chamo "echo hello"
-          Então a saída deve ser "hello"
+      Quando eu chamo "echo hello"
+      Então a saída deve ser "hello"
 ```
 
-    * Checar se algum sistema externo recebeu a mensagem esperada:
+* Checar se algum sistema externo recebeu a mensagem esperada:
 
 ```gherkin
           Quando eu enviar um email com:
@@ -402,15 +383,17 @@ Exemplos de Então
             """
 ```
 
-    Embora possa ser tentador implementar etapas Então para apenas 
-    olhar no banco de dados - resista à tentação. Você deve verificar
-    somente saídas que podem ser observadas pelo usuário (ou sistema 
-    externo). Se a base de dados somente é visível internamente por 
-    sua aplicação, mas é finalmente exposta pela saída do seu sistema
-    em um navegador web, na linha de comando ou uma mensagem de email.
+> Cuidado!
+>
+> Embora possa ser tentador implementar etapas Então para apenas 
+> olhar no banco de dados - resista à tentação. Você deve verificar
+> somente saídas que podem ser observadas pelo usuário (ou sistema 
+> externo). Se a base de dados somente é visível internamente por 
+> sua aplicação, mas é finalmente exposta pela saída do seu sistema
+> em um navegador web, na linha de comando ou uma mensagem de email.
 
 E, Mas
-~~~~~~
+------
 
 Se você tem várias etapas Dado, Quando ou Então vocẽ pode escrever:
 
@@ -443,9 +426,9 @@ as outras etapas; que não faz distinção entre eles - Mas você deve!
 Argumentos Multilineos
 ----------------------
 
-A única linha [etapa](#etapas) permite ao Behat extrair pequenas strings de 
-suas etapas e recebê-los em suas step definitions. No entanto, há 
-momentos em que você quer passar uma estrutura de dados mais rica a 
+A única linha [etapa](#etapas) que permite ao Behat extrair pequenas 
+strings de suas etapas e recebê-los em suas step definitions. No entanto, 
+há momentos em que você quer passar uma estrutura de dados mais rica a 
 partir de uma step definition.
 
 Para isto foram porjetados os Argumentos Multilineos. Eles são 
