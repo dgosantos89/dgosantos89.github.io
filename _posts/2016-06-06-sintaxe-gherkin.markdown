@@ -24,10 +24,9 @@ para testes automatizados. Behat também tem uma característica
 bonus: Ele fala para você usando linguagem verdadeira, humana 
 dizendo a você o código que você deve escrever.
 
-    Dica:
-
-    Se você ainda é novo no Behat, vá para :doc:`/quick_intro_pt1` 
-    primeiro,então retorne aqui para aprender mais sobre Gherkin.
+Dica:
+Se você ainda é novo no Behat, vá para [introdução rápida](https://dgosantos89.github.io/introducao-rapida/) 
+primeiro,então retorne aqui para aprender mais sobre Gherkin.
 
 Sintaxe Gherkin
 ---------------
@@ -66,7 +65,7 @@ Vamos analizar o exemplo:
 
 * ``Funcionalidade: Algum texto descritivo conciso do que é desejado`` 
     inicia a feature e lhe dá um título. Aprenda mais sobre funcionalidades
-    na seção "`Features`_".
+    na seção [Funcionalidades](#Funcionalidades).
 
 * As próximas três linhas (``A fim de ...``, ``Como um ...``, ``Eu quero...``)
     dão um contexto fornecem um contexto para as pessoas que lêem o seu recurso 
