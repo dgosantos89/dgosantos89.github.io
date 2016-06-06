@@ -65,7 +65,7 @@ Vamos analizar o exemplo:
 
 * ``Funcionalidade: Algum texto descritivo conciso do que é desejado`` 
     inicia a feature e lhe dá um título. Aprenda mais sobre funcionalidades
-    na seção [Funcionalidades](#Funcionalidades).
+    na seção "[Funcionalidades](#funcionalidades)".
 
 * As próximas três linhas (``A fim de ...``, ``Como um ...``, ``Eu quero...``)
     dão um contexto fornecem um contexto para as pessoas que lêem o seu recurso 
@@ -74,11 +74,11 @@ Vamos analizar o exemplo:
     
 * ``Cenário: Uma determinada situação de negócios`` inicia o cenário e
     contêm uma descrição do cenário. Aprenda mais sobre cenários na seção 
-    "`Scenarios`_" 
+    "[Cenários](#cenrios)" 
     
 * As próximas 7 linhas são etapas do cenário, cada um dos quais é comparado
     com um padrão definido em outro lugar. Aprenda mais sobre etapas na
-    seção "`Steps`_"
+    seção "[Etapas](#etapas)"
 
 * ``Cenário: Uma situação diferente`` inicia o próximo e cenário assim por diante.
 
@@ -96,10 +96,10 @@ equivalente) seguido de três linhas identadas iniciam uma funcionalidade.
 Usualmente uma feature contém uma lista de cenários. Você pode escrever 
 qualquer coisa que você precise até o primeiro cenário, que inicia com 
 ``Cenário:`` (ou o seu equivalente) em uma nova linha. Você pode usar
-`tags`_ para agrupar funcionalidades e cenários, independente da estrutura
+[tags](#tags) para agrupar funcionalidades e cenários, independente da estrutura
 do seu arquivo e diretório.
 
-Todos cenários consistem em uma lista de `etapas`_, que devem iniciar com
+Todos cenários consistem em uma lista de [etapas](#etapas), que devem iniciar com
 uma das palvras chaves ``Dado``, ``Quando``, ``Então``, ``Mas`` ou ``E``
 (ou o equivalente de um destes). O Behat trata eles do mesmo modo, mas
 você não deve fazer isto.
@@ -119,16 +119,16 @@ Aqui temos um exemplo:
         Então eu deveria ser servido de um café
 ```
 
-Além do básico `Cenário`_, uma feature pode conter `Esquema do Cenário`_
-e `Contexto`_.
+Além do básico [Cenários](#cenrios), uma feature pode conter [Esquema do Cenário](#esquema-do-cenrio)
+e [Contexto](#contexto).
 
-Cenário
--------
+Cenários
+--------
 
 Cenários são uma das principais estruturas do Gherkin. Todo cenário deve 
 iniciar com a palavra chave ``Cenário:`` (ou palavra chave equivalente),
 opcionalmente seguido de um título de cenário. Cada funcionalidade pode 
-ter um ou mais cenários e todo cenário consiste em um ou mais `etapa`_.
+ter um ou mais cenários e todo cenário consiste em um ou mais [etapa](#etapas).
 
 Os cenários seguintes tem cada um 3 etapas:
 
@@ -202,8 +202,8 @@ execução subsequente do Esquema do Cenário, até que o fim da tabela de
 ``Exemplos`` seja alcançado.
 
 ```
-    Vocẽ também pode usar os espaços reservados em `Argumentos 
-    Multilineos`_.
+    Vocẽ também pode usar os espaços reservados em [Argumentos 
+    Multilineos](#argumentos-multilineos).
 ```
 
 ```
@@ -270,8 +270,8 @@ dos seus hooks ``BeforeScenario`` (:doc:`/guides/3.hooks`).
 Etapas
 ------
 
-`Funcionalidades`_ consiste em etapas, também conhecido como `Dado`_, 
-`Quando`_ e ``Então_.
+[Funcionalidades](#funcionalidades) consiste em etapas, também conhecido como [Dado](#dado), 
+[Quando](#quando) e `[Então](#ento).
 
 O Behat não tem uma distinção técnica entre estes três tipos de etapas.
 Contudo, nós recomendamos fortemente que você faça! Estas palavras
@@ -325,7 +325,7 @@ Exemplos de Dado
 Usando Dado como massa de dados:
 
     Se você usa ORMs como Doctrine ou Propel, nós recomendamos a utilização
-    de uma etapa Dado com o argumento `tabela`_ para configurar registros 
+    de uma etapa Dado com o argumento [tabela](#tabelas) para configurar registros 
     em vez de objetos. Neste caminho você pode ler todos os cenários em um
     único lugar e fazer sentido fora dele sem ter que saltar entre arquivos: 
 ```
@@ -445,9 +445,7 @@ as outras etapas; que não faz distinção entre eles - Mas você deve!
 Argumentos Multilineos
 ----------------------
 
-A linha um `etapa`_
-
-A única linha `etapas`_ permite ao Behat extrair pequenas strings de 
+A única linha [etapa](#etapas) permite ao Behat extrair pequenas strings de 
 suas etapas e recebê-los em suas step definitions. No entanto, há 
 momentos em que você quer passar uma estrutura de dados mais rica a 
 partir de uma step definition.
@@ -456,7 +454,7 @@ Para isto foram porjetados os Argumentos Multilineos. Eles são
 escritos nas linhas que seguem imediatamente uma etapa e são passadas 
 para o método step definition como um último argumento.
 
-Etapas de Argumentos Multilineos vem em dois modos: `tabelas`_ ou `pystrings`_.
+Etapas de Argumentos Multilineos vem em dois modos: [tabelas](#tabelas) ou [pystrings](#pystrings).
 
 Tabelas
 ~~~~~~~
@@ -474,10 +472,10 @@ de Dado ou como espera de um Então.
         | Bryan | bryan@email.org | 456   |
 ```
 
-    Não confunda tabelas com `Esquemas do cenário`_  - sintaticamente 
-    eles são identicos, mas eles tem propósitos diferentes. Esquemas
-    declaram diferentes valores múltiplos ao mesmo cenário, enquanto
-    tabelas são usadas para esperar um conjunto de dados.
+Não confunda tabelas com [Esquemas do cenário](#esquemas-do-cenrio) - sintaticamente 
+eles são identicos, mas eles tem propósitos diferentes. Esquemas
+declaram diferentes valores múltiplos ao mesmo cenário, enquanto
+tabelas são usadas para esperar um conjunto de dados.
 
 ```
 Tabelas correspondentes em sua Step Definition
