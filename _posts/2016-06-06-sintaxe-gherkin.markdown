@@ -33,7 +33,7 @@ Sintaxe Gherkin
 
 Bem como YAML e Python, Gherkin é uma linguagem orientada a espaços, ela
 usa identação para definir a estrutura. Os fins de linha encerram as 
-declarações (denominados steps) e espaços ou tabs também podem ser usados
+declarações (denominados etapas) e espaços ou tabs também podem ser usados
 para identação (nós sugerimos a você usar espaços para portabilidade).
 Finalmente, a maioria das linhas em Gherkin iniciam com uma palavra
 chave especial:
