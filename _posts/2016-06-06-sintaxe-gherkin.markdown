@@ -1,3 +1,15 @@
+---
+title: "Escrevendo Features"
+layout: post
+date: 2016-06-02 16:20
+tag:
+- Behat
+- Gherkin
+- Sintaxe
+blog: false
+star: false
+---
+
 Escrevendo Features
 ===================
 
