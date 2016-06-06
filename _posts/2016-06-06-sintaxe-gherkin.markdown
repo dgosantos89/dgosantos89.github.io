@@ -20,13 +20,13 @@ para a descrição de comportamentos. Isto lhe dá a habilidade
 de remover detalhes lógicos dos testes de comportamento.
 
 Gherkin serve como documentação do seu projeto, bem como
-para testes automatizados. Behat também tem uma característica
-bonus: Ele fala para você usando linguagem verdadeira, humana 
-dizendo a você o código que você deve escrever.
+para testes automatizados. O Behat também tem uma característica
+bônus: Ele fala para você, usando linguagem humana, o código que você deve escrever.
 
-Dica:
-Se você ainda é novo no Behat, vá para [introdução rápida](https://dgosantos89.github.io/introducao-rapida/) 
-primeiro,então retorne aqui para aprender mais sobre Gherkin.
+>Dica:
+>
+>Se você ainda é novo no Behat, vá para [introdução rápida](https://dgosantos89.github.io/introducao-rapida/) 
+>primeiro,então retorne aqui para aprender mais sobre Gherkin.
 
 Sintaxe Gherkin
 ---------------
