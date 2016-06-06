@@ -201,10 +201,9 @@ coluna da tabela. O valor substituido pelo espaço reservado muda a cada
 execução subsequente do Esquema do Cenário, até que o fim da tabela de
 ``Exemplos`` seja alcançado.
 
-```
-    Vocẽ também pode usar os espaços reservados em [Argumentos 
-    Multilineos](#argumentos-multilineos).
-```
+
+Vocẽ também pode usar os espaços reservados em [Argumentos Multilineos](#argumentos-multilineos).
+
 
 ```
     Sua etapa de definições nunca terá que coincidir com o próprio texto 
@@ -321,14 +320,13 @@ Exemplos de Dado
     usuário aqui (em Symfony: falar com os modelos).
 ```
 
-```
 Usando Dado como massa de dados:
 
-    Se você usa ORMs como Doctrine ou Propel, nós recomendamos a utilização
-    de uma etapa Dado com o argumento [tabela](#tabelas) para configurar registros 
-    em vez de objetos. Neste caminho você pode ler todos os cenários em um
-    único lugar e fazer sentido fora dele sem ter que saltar entre arquivos: 
-```
+Se você usa ORMs como Doctrine ou Propel, nós recomendamos a utilização
+de uma etapa Dado com o argumento [tabela](#tabelas) para configurar registros 
+em vez de objetos. Neste caminho você pode ler todos os cenários em um
+único lugar e fazer sentido fora dele sem ter que saltar entre arquivos: 
+
 
 ```gherkin
 
