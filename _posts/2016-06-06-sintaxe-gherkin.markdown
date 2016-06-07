@@ -203,7 +203,7 @@ execução subsequente do Esquema do Cenário, até que o fim da tabela de
 ``Exemplos`` seja alcançado.
 
 
-Você também pode usar os espaços reservados em [Argumentos Multilineos](#argumentos-multilineos).
+Você também pode usar os espaços reservados em [Argumentos Multilineares](#argumentos-multilineares).
 
 > Sua etapa de definições nunca terá que coincidir com o próprio texto 
 > do espaço reservado, mas sim os valores terão que substituir o 
@@ -395,7 +395,7 @@ Dois bons exemplos do uso de **Então** são:
 E, Mas
 ------
 
-Se você tem várias etapas Dado, Quando ou Então vocẽ pode escrever:
+Se você tem várias etapas Dado, Quando ou Então você pode escrever:
 
 ```gherkin
     Cenário: Múltiplos Dado
@@ -423,25 +423,25 @@ fluente do seu Cenário:
 O Behat interpreta as etapas iniciando com E ou Mas exatamente como 
 as outras etapas; que não faz distinção entre eles - Mas você deve!
 
-Argumentos Multilineos
-----------------------
+Argumentos Multilineares
+------------------------
 
-A única linha [etapa](#etapas) que permite ao Behat extrair pequenas 
-strings de suas etapas e recebê-los em suas step definitions. No entanto, 
-há momentos em que você quer passar uma estrutura de dados mais rica a 
-partir de uma step definition.
+As [etapas](#etapas) de uma linha deixam Behat extrair pequenas 
+strings das suas etapas e recebê-las em suas step definitions. 
+No entanto, há momentos em que você quer passar uma estrutura de 
+dados mais rica a partir de uma etapa para a step definitions.
 
-Para isto foram porjetados os Argumentos Multilineos. Eles são 
+Para isto foram porjetados os Argumentos Multilineares. Eles são 
 escritos nas linhas que seguem imediatamente uma etapa e são passadas 
 para o método step definition como um último argumento.
 
-Etapas de Argumentos Multilineos vem em dois modos: [tabelas](#tabelas) ou [pystrings](#pystrings).
+Etapas de Argumentos Multilineares vem em dois modos: [tabelas](#tabelas) ou [pystrings](#pystrings).
 
 Tabelas
-~~~~~~~
+-------
 
-As tabelas são etapas de argumentos são úteis para a especificação de
-um grande conjunto de dados - normalmente como entrada para uma saída 
+As tabelas são etapas de argumentos úteis para a especificação de um 
+grande conjunto de dados - normalmente como entrada para uma saída 
 de Dado ou como espera de um Então.
 
 ```gherkin
@@ -453,18 +453,18 @@ de Dado ou como espera de um Então.
         | Bryan | bryan@email.org | 456   |
 ```
 
-Não confunda tabelas com [Esquemas do cenário](#esquemas-do-cenrio) - sintaticamente 
-eles são identicos, mas eles tem propósitos diferentes. Esquemas
-declaram diferentes valores múltiplos ao mesmo cenário, enquanto
-tabelas são usadas para esperar um conjunto de dados.
+> Atenção!
+> 
+> Não confunda tabelas com [Esquemas do cenário](#esquemas-do-cenrio) - sintaticamente 
+> eles são idênticos, mas eles têm propósitos diferentes. Esquemas
+> declaram diferentes valores múltiplos ao mesmo cenário, enquanto
+> tabelas são usadas para esperar um conjunto de dados.
 
-```
-Tabelas correspondentes em sua Step Definition
+Tabelas equivalentes em sua Step Definition
 
-    Uma definição correspondente para esta etapa se parece com isso:
-```
+Uma definição equivalente para esta etapa se parece com isso:
+
 ```php
-
         use Behat\Gherkin\Node\TableNode;
 
         // ...
@@ -478,20 +478,18 @@ Tabelas correspondentes em sua Step Definition
                 // $linha['nome'], $linha['email'], $linha['fone']
             }
         }
-
-    Uma tabela é injetada na definição do objeto ``TableNode``, com 
-    o qual vocẽ pode obter um hash de colunas (método 
-    ``TableNode::getHast()``) ou por linhas 
-    (``TableNode::getRowsHash()``).
 ```
 
-PyStrings
-~~~~~~~~~
+Uma tabela é injetada na definição do objeto ``TableNode``, com 
+o qual você pode obter um hash de colunas (método ``TableNode::getHash()``) 
+ou por linhas (``TableNode::getRowsHash()``).
 
-Strings multilineas (também conhecidas como PyStrings) são úteis 
+PyStrings
+---------
+
+Strings multilineares (também conhecidas como PyStrings) são úteis 
 para a especificação de um grande pedaço de texto. O texto deve 
-ser compensado por delimitadores que consistem em três marcas de 
-aspas duplas (`` """ ``), colocadas em linha:
+ser delimitado por três aspas duplas (`` """ ``) colocadas em linha:
 
 ```gherkin
     Cenário:
@@ -505,20 +503,19 @@ aspas duplas (`` """ ``), colocadas em linha:
         """
 ```
 
-    A inspiração para o PyString vem do Python onde ``"""`` é
-    usado para delimitar docstrings, mais ou menos como 
-    ``/** ... */`` é usado para docblocks em PHP.
+> A inspiração para o PyString vem do Python onde ``"""`` é
+> usado para delimitar docstrings, mais ou menos como 
+> ``/** ... */`` é usado para docblocks em PHP.
 
-```
-PyStrings correspondentes em sua step definitions
 
-    Em sua step definition, não precisa procurar por este texto 
-    e corresponder com o seu padrão. O texto vai automaticamente 
-    passar pelo último argumento no método step definition. 
-    Por exemplo:
-```
+PyStrings equivalentes em sua step definitions
+
+Em sua step definition, não precisa procurar por este texto 
+e corresponder com o seu padrão. O texto vai automaticamente 
+passar pelo último argumento no método step definition. 
+Por exemplo:
+
 ```php
-
         use Behat\Gherkin\Node\PyStringNode;
 
         // ...
@@ -532,16 +529,16 @@ PyStrings correspondentes em sua step definitions
         }
 ```
 
-    PyStrings são armazenadas em uma instancia ``PyStringNode``, que você 
-    pode simplesmente converter a uma string com ``(string) $pystring``
-    ou ``$pystring->getRaw()`` como no exemplo acima.
+PyStrings são armazenadas em uma instancia ``PyStringNode``, que você 
+pode simplesmente converter a uma string com ``(string) $pystring``
+ou ``$pystring->getRaw()`` como no exemplo acima.
 
-    A identação para abrir ``"""`` não é importante, apesar de ser uma 
-    prática comum deixar dois espaços da etapa de fechamento. A identação
-    dentro das aspas triplas, entretanto, é significante. Cada linha da
-    string passa pela chamada da step definition será re-identada de 
-    acordo com a abertura ``"""``. A identação além da coluna de abertura 
-    ``"""`` por conseguinte, será preservada.
+> A identação para abrir ``"""`` não é importante, apesar de ser uma 
+> prática comum deixar dois espaços da etapa de fechamento. A identação
+> dentro das aspas triplas, entretanto, é significante. Cada linha da
+> string passa pela chamada da step definition será re-identada de 
+> acordo com a abertura ``"""``. A identação além da coluna de abertura 
+> ``"""`` por conseguinte, será preservada.
 
 Tags
 ----
