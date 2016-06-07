@@ -564,14 +564,14 @@ apenas separá-los com espaços:
     Funcionalidade: Verificar o faturamento
 ```
 
-    Se uma tag existe em uma ``Funcionalidade``, o Behat irá atribuir essa 
-    tag para todos os ``Cenários`` filhos e ``Esquemas do Cenário`` também.
+> Se uma tag existe em uma ``Funcionalidade``, o Behat irá atribuir essa 
+> tag para todos os ``Cenários`` filhos e ``Esquemas do Cenário`` também.
 
-Gherkin em Muitas Linguagens
-----------------------------
+Gherkin em Muitas Linguas
+-------------------------
 
-O Gherkin está disponível em muitas linguagens, permitindo você escrever 
-histórias usando as palavras chave de sua linguagem. Em outras palavras, 
+O Gherkin está disponível em muitas linguas, permitindo você escrever 
+histórias usando as palavras chave da sua lingua. Em outras palavras, 
 se você fala Francês, você pode usar a palavra ``Fonctionnalité`` ao invés 
 de ``Funcionalidade``.
 
@@ -579,13 +579,12 @@ Para checar se o Behat e o Gherkin suportam a sua lingua (Francês, por exemplo)
 execute:
 
 ```bash
-
     behat --story-syntax --lang=fr
 ```
 
-    Guarde em sua mente que qualquer linguagem diferente de ``en`` precisa 
-    ser explicitada com um comentário ``#language: ...`` no início de seu 
-    arquivo ``*.feature``:
+Guarde em sua mente que qualquer linguagem diferente de ``en`` precisa 
+ser explicitada com um comentário ``#language: ...`` no início de seu 
+arquivo ``*.feature``:
 
 ```gherkin
         # language: fr
@@ -593,7 +592,8 @@ execute:
           ...
 ```
 
-    Desta forma, suas funcionalidades vão realizar todas as informações sobre 
-    seu tipo de conteúdo, o que é muito importante para metodologias como BDD 
-    e também dá ao Behat a capacidade de ter recursos de vários idiomas em 
-    uma suíte.    
+Desta forma, suas funcionalidades irão realizar todas as informações sobre 
+seu tipo de conteúdo, o que é muito importante para metodologias como BDD 
+e também dá ao Behat a capacidade de ter funcionalidades de vários idiomas 
+em uma suíte.
+
