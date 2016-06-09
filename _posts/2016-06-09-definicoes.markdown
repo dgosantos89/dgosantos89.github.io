@@ -1,7 +1,19 @@
+---
+title: "Definições"
+layout: post
+date: 2016-06-09 16:20
+tag:
+- Behat
+- Mink
+- Documentação
+blog: false
+star: false
+---
+
 Definindo Ações Reutilizáveis
 =============================
 
-:doc:`Gherkin language</guides/1.gherkin>` fornece uma maneira para descrever
+[Gherkin](https://dgosantos89.github.io/sintaxe-gherkin/) fornece uma maneira para descrever
 o comportamento da sua aplicação em uma linguagem de negócios compreensível.
 Mas como você testa se o comportamento descrito realmente é implementado?
 Ou se esta aplicação satisfaz as expectativas de negócios descritas nos
