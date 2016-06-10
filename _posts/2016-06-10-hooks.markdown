@@ -1,5 +1,17 @@
-Hooking no Processo de Teste
-============================
+---
+title: "Hooks"
+layout: post
+date: 2016-06-10 13:40
+tag:
+- Behat
+- Mink
+- Hooks
+blog: false
+star: false
+---
+
+Hooks no Processo de Teste
+=========================
 
 Você aprendeu :doc:`como escrever definições de etapas </guides/2.definitions>`
 e que com :doc:`Gherkin </guides/1.gherkin>` você pode mover etapas comuns 
