@@ -1,3 +1,15 @@
+---
+title: "Contextos"
+layout: post
+date: 2016-06-13 15:00
+tag:
+- Behat
+- Mink
+- Contexts
+blog: false
+star: false
+---
+
 Funcionalidades de teste
 ========================
 
