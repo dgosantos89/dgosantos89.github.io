@@ -71,7 +71,7 @@ Aprenda Behat com os seguintes guias:
 * [1.gherkin](https://dgosantos89.github.io/sintaxe-gherkin/)
 * [2.definições](http://dgosantos89.github.io/definicoes/)
 * [3.hooks](http://dgosantos89.github.io/hooks/)
-* guides/4.contexts
+* [4.contextos](http://dgosantos89.github.io/contextos/)
 * guides/5.suites
 * guides/6.profiles
 * guides/7.run
