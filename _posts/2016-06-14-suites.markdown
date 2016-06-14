@@ -1,3 +1,14 @@
+---
+title: "Hooks"
+layout: post
+date: 2016-06-14 09:55
+tag:
+- Behat
+- Mink
+- Suite
+blog: false
+star: false
+---
 Configurando Suite de Testes
 ============================
 
