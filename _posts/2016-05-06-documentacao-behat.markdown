@@ -72,7 +72,7 @@ Aprenda Behat com os seguintes guias:
 * [2.definições](http://dgosantos89.github.io/definicoes/)
 * [3.hooks](http://dgosantos89.github.io/hooks/)
 * [4.contextos](http://dgosantos89.github.io/contextos/)
-* guides/5.suites
+* [5.suites](http://dgosantos89.github.io/suites/)
 * guides/6.profiles
 * guides/7.run
 
