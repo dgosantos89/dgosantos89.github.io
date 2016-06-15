@@ -76,13 +76,13 @@ Aprenda Behat com os seguintes guias:
 * [6.profiles](http://dgosantos89.github.io/perfis/)
 * [7.executando](http://dgosantos89.github.io/executando/)
 
-Cookbook
---------
+Livro de Receitas
+-----------------
 
 Aprenda soluções específicas para necessidades específicas:
 
-* cookbooks/1.symfony2_integration
-* cookbooks/context_communication
+* [1.integração do symfony2](https://dgosantos89.github.io/integracao-do-symfony2/)
+* [2.comunicação do contexto](https://dgosantos89.github.io/comunicacao-do-contexto/)
 
 Mais sobre BDD
 --------------
@@ -91,5 +91,4 @@ Quando estiver com o Behat instalado e funcionando, você pode aprender mais sob
 
 * [Dan North's "What's in a Story?"](http://dannorth.net/whats-in-a-story/)
 * [Cucumber's "Backgrounder"](https://github.com/cucumber/cucumber/wiki/Cucumber-Backgrounder)
-
-* `Cucumber: http://cukes.info/`
+* [Cucumber](http://cukes.info/)
