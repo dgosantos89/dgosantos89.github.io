@@ -1,3 +1,14 @@
+---
+title: "Executando"
+layout: post
+date: 2016-06-15 12:00
+tag:
+- Behat
+- Mink
+- Executando
+blog: false
+star: false
+---
 Executando Testes
 =================
 
