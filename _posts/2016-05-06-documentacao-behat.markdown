@@ -74,7 +74,7 @@ Aprenda Behat com os seguintes guias:
 * [4.contextos](http://dgosantos89.github.io/contextos/)
 * [5.suites](http://dgosantos89.github.io/suites/)
 * [6.profiles](http://dgosantos89.github.io/perfis/)
-* guides/7.run
+* [7.executando](http://dgosantos89.github.io/executando/)
 
 Cookbook
 --------
