@@ -81,7 +81,7 @@ Livro de Receitas
 
 Aprenda soluções específicas para necessidades específicas:
 
-* [1.integração do symfony2](https://dgosantos89.github.io/integracao-do-symfony2/)
+* [1.integração do symfony2](https://dgosantos89.github.io/integracao-do-symfony/)
 * [2.comunicação do contexto](https://dgosantos89.github.io/comunicacao-do-contexto/)
 
 Mais sobre BDD
