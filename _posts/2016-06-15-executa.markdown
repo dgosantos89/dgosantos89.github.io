@@ -1,0 +1,71 @@
+Executando Testes
+=================
+
+Opções de formato
+-----------------
+
+O Behat suporta diferentes formas de saídas de informações. As saídas no 
+``behat`` são chamadas *formatos* ou *formatadores*. Você pode dizer ao 
+``behat`` para executar com um formatador específico pelo fornecimento 
+da opção ``--format``:
+
+.. code-block:: bash
+
+    $ behat --format progress
+
+.. note::
+
+    O formatador padrão é o ``pretty``.
+
+O ``behat`` suporta 2 formatadores de saída:
+
+* ``pretty`` - imprime a funcionalidade como é:
+
+    .. image:: /images/formatter-pretty.png
+       :align: center
+
+* ``progress`` - imprime um caractere por etapa:
+
+   .. image:: /images/formatter-progress.png
+      :align: center
+
+Se você não quer imprimir a saída no console, você pode dizer ao ``behat`` 
+para imprimir a saída em um arquivo ao invés de ``STDOUT`` com a opção 
+``--out``:
+
+.. code-block:: bash
+
+    $ behat --format pretty --out relatorio.txt
+
+.. note::
+
+    Alguns formatadores, como ``junit``, sempre requerem a opção especificar 
+    a opção ``--out``. O formatador ``junit`` gera um arquivo ``*.xml`` para 
+    cada suite, então precisa de um diretório de destino para colocar estes 
+    arquivos XML.
+    
+Você também pode especificar múltiplos formatos para serem usados pelo Behat 
+utilizando múltiplas opções --format:
+
+.. code-block:: bash
+
+    $ behat --format pretty --format progress
+
+Neste caso, a saída padrão irá ser utilizada como saída para cada formato. 
+Mas se você quiser que eles usem diferentes - especifique com ``--out``:
+
+.. code-block:: bash
+
+    $ behat -f pretty -o ~/pretty.out -f progress -o std -f junit -o xml
+
+Neste caso, a saída do formatador pretty escreverá no arquivo ``~/pretty.out``, 
+a saída do formatador junit escrever´a no arquivo ``xml`` e o formatador progress 
+somente imprimira no console.
+
+O Behat tentará identificar arduamente se o seu terminal suporta cores ou não, 
+mas as vezes ele ainda falhará. Nestes casos, você pode forçar o ``behat`` a 
+utilizar cores (ou não) com as opções ``--colors`` ou ``--no-colors``, respectivamente:
+
+.. code-block:: bash
+
+    $ behat --no-colors
