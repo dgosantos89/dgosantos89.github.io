@@ -4,8 +4,8 @@ layout: post
 date: 2016-05-06 16:20
 tag:
 - Behat
-- Mink
 - Documentação
+- Português
 blog: true
 star: false
 ---
