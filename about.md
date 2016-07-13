@@ -5,7 +5,7 @@ permalink: /about/index.html
 ---
 ![Profile Image]({{ site.url }}/{{ site.picture }})
 
-<p>Formado em Análise e desenvolvimento de sistemas pela FATEC, com curso superior de Sistemas de informação trancado no 5º semestre, Técnico em Hardware - Montagem e Manutenção de Micros e Redes.</p>
+<p>Desenvolvedor com foco em Qualidade, formado em Análise e desenvolvimento de sistemas pela FATEC, com curso superior de Sistemas de informação trancado no 5º semestre, Técnico em Hardware - Montagem e Manutenção de Micros e Redes.</p>
 
 <h2>Skills</h2>
 
