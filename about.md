@@ -10,21 +10,23 @@ permalink: /about/index.html
 <h2>Skills</h2>
 
 <ul class="skill-list">
-	<li>BDD - Testes automatizados</li>
-	<li>TDD e Continuous Integration</li>
-	<li>Git</li>
-	<li>Gherkin</li>
-	<li>Cucumber</li>
-	<li>Selenium</li>
-	<li>Ruby</li>
-	<li>Watir</li>
-	<li>Scrum e Kanban</li>
-	<li>UML</li>
-	<li>ITIL</li>
-	<li>JIRA</li>
+	<li>BDD</li>
+	<li>TDD</li>
 	<li>PHP</li>
+	<li>Behat</li>
+	<li>PHPUnit</li>
 	<li>MySQL</li>
 	<li>HTML</li>
+	<li>Javascript</li>
+	<li>Gherkin</li>
+	<li>Selenium</li>
+	<li>Watir</li>
+	<li>Ruby</li>
+	<li>Cucumber</li>
+	<li>UML</li>
+	<li>ITIL</li>
+	<li>Scrum e Kanban</li>
+	<li>JIRA</li>
 	<li>C</li>
 </ul>
 
