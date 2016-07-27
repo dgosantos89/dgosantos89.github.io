@@ -11,21 +11,22 @@ permalink: /about/index.html
 
 <ul class="skill-list">
 	<li>BDD</li>
-	<li>TDD</li>
-	<li>PHP</li>
-	<li>Behat</li>
-	<li>PHPUnit</li>
-	<li>MySQL</li>
-	<li>HTML</li>
-	<li>Javascript</li>
-	<li>Gherkin</li>
-	<li>Selenium</li>
-	<li>Watir</li>
-	<li>Ruby</li>
-	<li>Cucumber</li>
-	<li>Scrum e Kanban</li>
-	<li>JIRA</li>
-	<li>C</li>
+    <li>TDD</li>
+    <li>Gherkin</li>
+    <li>Cucumber</li>
+    <li>Capybara</li>
+    <li>Behat</li>
+    <li>Mink</li>
+    <li>PHPUnit</li>
+    <li>Selenium</li>
+    <li>Watir</li>
+    <li>PHP</li>
+    <li>Ruby</li>
+    <li>C</li>
+    <li>MySQL</li>
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>Javascript</li>
 </ul>
 
 <h2>Projects</h2>
