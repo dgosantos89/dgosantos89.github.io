@@ -34,8 +34,7 @@ permalink: /about/index.html
 <ul>
 	<li><a href="https://github.com/dgosantos89/behat-documentation">Tradução da documentação do Behat</a></li>
 	<li><a href="https://github.com/dgosantos89/mink-documentation">Tradução da documentação do Mink</a></li>
-	<li><a href="https://github.com/dgosantos89/teste_backend_catho">Teste desenvolvedor com ênfase em BackEnd 
-	Catho</a></li>
+	<li><a href="https://github.com/dgosantos89/teste_backend_catho">Teste para desenvolvedor com BackEnd da Catho</a></li>
 	<li><a href="https://github.com/dgosantos89/URI_Online_Judge">Desafios de estrutura de dados resolvidos em C</a></li>
-	<li><a href="https://github.com/dgosantos89/teste_automacao">Teste para vaga de QA Walmart - 2015</a></li>
+	<li><a href="https://github.com/dgosantos89/qa-walmart-php">Teste para QA do Walmart (versão em PHP)</a></li>
 </ul>
