@@ -25,6 +25,6 @@ No site vamos validar a seguinte sequência de ações:
 * Adicionar o Produto ao carrinho 
 * Abrir o carrinho e validar que o mesmo foi adicionado com sucesso 
 
-Para este teste escrevi a seguinte ![Feature](https://raw.githubusercontent.com/dgosantos89/qa-walmart-php/master/features/PrimeiroExercicio.feature)
+Para este teste escrevi a seguinte [Feature](https://raw.githubusercontent.com/dgosantos89/qa-walmart-php/master/features/PrimeiroExercicio.feature)
 
-E para esta feature desenvolvi esta ![Context](https://raw.githubusercontent.com/dgosantos89/qa-walmart-php/master/features/bootstrap/PrimeiroExercicioContext.php)
+E para esta feature desenvolvi esta [Context](https://raw.githubusercontent.com/dgosantos89/qa-walmart-php/master/features/bootstrap/PrimeiroExercicioContext.php)
