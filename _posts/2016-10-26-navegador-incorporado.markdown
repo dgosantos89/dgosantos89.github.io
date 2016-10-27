@@ -13,8 +13,8 @@ star: false
 Aplicação com um Navegador incorporado
 ======================================
 Como automatizá-la?
---------------------
-
+  
+  
 Recentemente me deparei com um objeto de navegador incorporado em uma aplicação.  
 Eu era capaz apenas de identificá-lo como um WinObject `navegador`,  
 então não era possível acessar o conteúdo dentro desta página.
@@ -26,7 +26,8 @@ O UFT não é capaz de reconhecer automaticamente funcionalidades de navegador
 em sua aplicação não Web como objetos Web, para isso é necessário utilizar esta ferramenta.  
   
   
-Para abrir o Register New Browser Control, vá em: 
+Para abrir o Register New Browser Control, vá em:  
+
 ```
   Iniciar > 
       Todos os Programas > 
