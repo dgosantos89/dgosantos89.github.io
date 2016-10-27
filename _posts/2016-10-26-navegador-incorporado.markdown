@@ -1,5 +1,5 @@
 ---
-title: "Navegador incorporado em aplicação"
+title: "Aplicação com um Navegador incorporado"
 layout: post
 date: 2016-10-26 16:20
 tag:
@@ -9,10 +9,9 @@ tag:
 blog: true
 star: false
 ---
-
-Aplicação com um Navegador incorporado
-======================================
+  
 Como automatizá-la?
+===================
   
   
 Recentemente me deparei com um objeto de navegador incorporado em uma aplicação.  
