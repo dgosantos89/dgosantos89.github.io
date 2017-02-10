@@ -14,6 +14,7 @@ permalink: /about/index.html
     <li>TDD</li>
     <li>Gherkin</li>
     <li>Cucumber</li>
+	<li>Calabash</li>
     <li>Capybara</li>
     <li>Behat</li>
     <li>Mink</li>
@@ -23,7 +24,7 @@ permalink: /about/index.html
     <li>PHP</li>
     <li>Ruby</li>
     <li>C</li>
-    <li>MySQL</li>
+    <li>SQL</li>
     <li>HTML</li>
     <li>CSS</li>
     <li>Javascript</li>
