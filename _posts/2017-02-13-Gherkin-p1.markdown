@@ -1,5 +1,5 @@
 ---
-title: "Aplicação com um Navegador incorporado"
+title: "Usando todo o poder do Gherkin 1/2"
 layout: post
 date: 2017-02-13 16:20
 tag:
