@@ -1,0 +1,178 @@
+---
+title: "Aplicação com um Navegador incorporado"
+layout: post
+date: 2017-02-13 16:20
+tag:
+- Cucumber
+- Feature
+- BDD
+blog: true
+star: false
+---
+
+Vez por outra vejo pessoas empolgadas, pois ouviram falar que estão surgindo linguagens com sintaxe tão natural que em breve qualquer pessoa da área de negócios poderá programar sem dificuldades.  
+Essas pessoas estão certas, realmente existem diversas linguagens surgindo com este intuito, mas oque você provavelmente não sabe é que esta não é uma ideia nova, o próprio COBOL (COmmon Business Oriented Language) foi criado com este intuito e você sabe oque aconteceu depois.  
+Por outro lado vemos algo que faz muito bem esse papel de comunicação entre a área de negócios e os desenvolvedores sendo amplamente utilizado há muito tempo e que você provavelmente tem em sua máquina, o Excel.  
+Mas neste post falaremos sobre uma linguagem que vem sendo amplamente utilizada no intuito de tornar mais fácil a comunicação entre os desenvolvedores, a área de negócios e outras partes interessadas, uma linguagem tão natural que qualquer um destes pode entender e até mesmo escrever, a Gherkin.
+  
+Gherkin é uma Business Readable, Domain Specific Language criada especificamente para a descrição de comportamentos, com a habilidade de remover detalhes lógicos dos testes de comportamento, que serve como documentação do projeto e para automação de testes, usando uma linguagem verdadeira e humana que lhe diz o código que você deve escrever.  
+  
+Neste primeiro post entenderemos melhor a sua estrutura básica e a melhor forma de a utilizarmos e no próximo post teremos alguns detalhes mais avançados que dificilmente você viu sendo aplicado por ai.
+  
+  
+Sintaxe Gherkin
+===============
+  
+Assim como YAML e o Python, Gherkin é uma linguagem orientada a espaços, ela usa indentação para definir a estrutura. Os fins de linha encerram as declarações (denominados steps) e espaços ou tabs também podem ser usados para indentação (sendo que o indicado é você usar espaços para obter uma melhor portabilidade).  
+  
+Vamos analisar o exemplo abaixo:  
+  
+```Gherkin
+# language: pt
+Funcionalidade: Algum texto descritivo conciso do que é desejado
+  A fim de realizar um valor de negócio
+  Como ator explicito do sistema
+  Eu quero ganhar algum resultado benéfico que promova a meta
+
+ Texto adicional...
+
+  Cenário: Uma determinada situação de negócios
+    Dado uma pré condição
+    E uma outra pré condição
+    Quando uma ação é feita pelo ator
+    E uma outra ação
+    E outra ação diferente
+    Então um resultado testável é alcançado
+    E outra coisa que possamos verificar também acontece
+
+  Cenário: Uma situação diferente
+    ...
+```
+
+No código, a primeira linha que vemos é um comentário. Sim, na sintaxe do Gherkin `#` é utilizado para comentar, mas este é um comentário especial.
+O Gherkin está disponível em muitas linguas, permitindo você escrever histórias usando palavras chave de sua lingua nativa. 
+Em outras palavras, se você fala Francês, você pode usar a palavra `Fonctionnalité` ao invés de `Funcionalidade`.
+Então nunca se esqueça de explicitar a língua utilizada no início do seu arquivo *.feature.
+
+No demais, o código é dividido em três partes: `Funcionalidades`, `Cenários` e `Steps`.  
+  
+`Funcionalidade: Algum texto descritivo conciso do que é desejado.`  
+	Inicia a feature e lhe dá um título.  
+	Seguido por três linhas (A fim de... Como um... Eu quero...).  
+
+`Cenário: Uma determinada situação de negócios`  
+	Contém uma descrição do cenário.  
+	As próximas 7 linhas são as chamadas steps do cenário.  
+
+`Cenário: Uma situação diferente`  
+	Inicia o próximo cenário.  
+  
+  
+Agora vamos ver os detalhes de cada uma destas partes:  
+  
+# Funcionalidades
+
+Os arquivos *.feature convencionalmente consistem em uma funcionalidade única.  
+Linhas iniciando com a palavra chave `Funcionalidade:` seguida por três linhas indentadas iniciam uma funcionalidade.  
+Você pode escrever qualquer coisa que você precise até o primeiro Cenário.  
+  
+# Cenário  
+  
+Cenários são uma das principais estruturas do Gherkin. Todo cenário deve iniciar com a palavra chave `Cenário:`, opcionalmente seguido de um título.  
+Cada funcionalidade pode ter um ou mais cenários e todo cenário é formado por uma ou mais `steps`.  
+  
+# Steps  
+  
+Funcionalidades consistem em steps, também conhecidas como `Dado`, `Quando` e `Então` que também podemos interpretar estas palavras-chave como uma máquina de estados finitos  
+  
+`Dado`  
+  
+O propósito da step `Dado` é colocar o sistema em um estado conhecido antes de iniciarmos a interação com o sistema.  
+Evite falar sobre interações em `Dado`, pense nele como uma pré condição em casos de uso.  
+  
+  
+Exemplos de `Dado`  
+  
+Dois bons exemplos do uso de `Dado` são:  
+  
+* Para criar registros (instâncias de modelo) ou de configuração do banco de dados:  
+  
+```Gherkin
+    Dado que não tenha usuários no site
+    Dado que o banco de dados esteja limpo
+```
+  
+* Autenticar um usuário (uma exceção a recomendação de não-interação coisas que “aconteceram antes” estão ok):  
+  
+```Gherkin
+    Dado que eu esteja logado como "Diego"
+```
+  
+  
+`Quando`  
+
+O propósito da step `Quando` é descrever a ação que o usuário executa, ou pensando em uma máquina de estados, a transição de estado.  
+  
+  
+Exemplos de `Quando`:  
+    
+* Interagir com uma página web:  
+  
+```Gherkin
+    Quando eu estiver em "/alguma/pagina"
+    Quando eu preencho o campo "username" com "diegosantos"
+```
+  
+`Então`  
+  
+O propósito da step `Então` é observar saídas. As observações devem estar relacionadas com o valor/benefício de negócio na sua descrição da funcionalidade.  
+As observações devem inspecionar a saída do sitema e não alguma oculta dela, que não tenha valor de negócios.  
+  
+  
+Dois bons exemplos do uso de `Então` são:  
+  
+* Verificar algo relacionado ao Dado + Quando está (ou não) na saída:  
+    
+```Gherkin
+    Quando eu chamo "echo hello"
+    Então a saída deve ser "hello"
+```
+  
+* Checar se algum sistema externo recebeu a mensagem esperada:  
+    
+```Gherkin
+    Quando eu enviar um email com:
+      """
+      ...
+      """
+    Então o cliente deve receber um email com:
+      """
+      ...
+      """
+```
+  
+`E, Mas`   
+
+Se você tem várias steps `Dado`, `Quando` ou `Então` você pode repetir:  
+  
+```Gherkin
+Cenário: Múltiplos Dado
+  Dado uma coisa
+  Dado outra coisa
+  Dado mais outra coisa
+  Quando eu abrir meus olhos
+  Então eu verei qualquer coisa
+  Então eu não verei qualquer outra coisa
+```
+  
+  Ou você pode usar steps `E` ou `Mas`, permitindo uma leitura mais natural do seu Cenário:  
+  
+```Gherkin
+ Cenário: Múltiplos Dado
+  Dado uma coisa
+  E outra coisa
+  E mais outra coisa
+  Quando eu abrir meus olhos
+  Então eu verei qualquer coisa
+  Mas eu não verei qualquer outra coisa
+```
