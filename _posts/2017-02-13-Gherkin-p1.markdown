@@ -10,12 +10,12 @@ blog: true
 star: false
 ---
 
-Vez por outra vejo pessoas empolgadas, pois ouviram falar que estão surgindo linguagens com sintaxe tão natural que em breve qualquer pessoa da área de negócios poderá programar sem dificuldades.  
+Vez por outra vejo pessoas empolgadas, falando sobre o surgimento de linguagens com sintaxe tão natural que em breve qualquer pessoa poderá programar sem dificuldades.  
 Essas pessoas estão certas, realmente existem diversas linguagens surgindo com este intuito, mas oque você provavelmente não sabe é que esta não é uma ideia nova, o próprio COBOL (COmmon Business Oriented Language) foi criado com este intuito e você sabe oque aconteceu depois.  
-Por outro lado vemos algo que faz muito bem esse papel de comunicação entre a área de negócios e os desenvolvedores sendo amplamente utilizado há muito tempo e que você provavelmente tem em sua máquina, o Excel.  
-Mas neste post falaremos sobre uma linguagem que vem sendo amplamente utilizada no intuito de tornar mais fácil a comunicação entre os desenvolvedores, a área de negócios e outras partes interessadas, uma linguagem tão natural que qualquer um destes pode entender e até mesmo escrever, a Gherkin.
+
+Neste post falaremos sobre uma linguagem que vem sendo amplamente utilizada no intuito de tornar mais fácil a comunicação entre os desenvolvedores, a área de negócios e outras partes interessadas, uma linguagem tão natural que qualquer um destes pode entender e até mesmo escrever, a Gherkin.
   
-Gherkin é uma Business Readable, Domain Specific Language criada especificamente para a descrição de comportamentos, com a habilidade de remover detalhes lógicos dos testes de comportamento, que serve como documentação do projeto e para automação de testes, usando uma linguagem verdadeira e humana que lhe diz o código que você deve escrever.  
+Gherkin é uma Business Readable, Domain Specific Language criada especificamente para a descrição de comportamentos, com a habilidade de remover detalhes lógicos dos testes, que serve como documentação do projeto e para automação de testes, usando uma linguagem verdadeira e humana que lhe diz o código que você deve escrever.  
   
 Neste primeiro post entenderemos melhor a sua estrutura básica e a melhor forma de a utilizarmos e no próximo post teremos alguns detalhes mais avançados que dificilmente você viu sendo aplicado por ai.
   
@@ -57,15 +57,20 @@ Então nunca se esqueça de explicitar a língua utilizada no início do seu arq
 No demais, o código é dividido em três partes: `Funcionalidades`, `Cenários` e `Steps`.  
   
 `Funcionalidade: Algum texto descritivo conciso do que é desejado.`  
-	Inicia a feature e lhe dá um título.  
-	Seguido por três linhas (A fim de... Como um... Eu quero...).  
-
+  
+Inicia a feature e lhe dá um título.  
+Seguido por três linhas (A fim de... Como um... Eu quero...).  
+  
+  
 `Cenário: Uma determinada situação de negócios`  
-	Contém uma descrição do cenário.  
-	As próximas 7 linhas são as chamadas steps do cenário.  
-
+  
+Contém uma descrição do cenário.  
+As próximas 7 linhas são as chamadas steps do cenário.  
+  
+  
 `Cenário: Uma situação diferente`  
-	Inicia o próximo cenário.  
+  
+Inicia o próximo cenário.  
   
   
 Agora vamos ver os detalhes de cada uma destas partes:  
@@ -85,7 +90,7 @@ Cada funcionalidade pode ter um ou mais cenários e todo cenário é formado por
   
 Funcionalidades consistem em steps, também conhecidas como `Dado`, `Quando` e `Então` que também podemos interpretar estas palavras-chave como uma máquina de estados finitos  
   
-`Dado`  
+# Dado  
   
 O propósito da step `Dado` é colocar o sistema em um estado conhecido antes de iniciarmos a interação com o sistema.  
 Evite falar sobre interações em `Dado`, pense nele como uma pré condição em casos de uso.  
@@ -109,7 +114,7 @@ Dois bons exemplos do uso de `Dado` são:
 ```
   
   
-`Quando`  
+# Quando  
 
 O propósito da step `Quando` é descrever a ação que o usuário executa, ou pensando em uma máquina de estados, a transição de estado.  
   
@@ -123,7 +128,7 @@ Exemplos de `Quando`:
     Quando eu preencho o campo "username" com "diegosantos"
 ```
   
-`Então`  
+# Então  
   
 O propósito da step `Então` é observar saídas. As observações devem estar relacionadas com o valor/benefício de negócio na sua descrição da funcionalidade.  
 As observações devem inspecionar a saída do sitema e não alguma oculta dela, que não tenha valor de negócios.  
@@ -151,7 +156,7 @@ Dois bons exemplos do uso de `Então` são:
       """
 ```
   
-`E, Mas`   
+# E, Mas   
 
 Se você tem várias steps `Dado`, `Quando` ou `Então` você pode repetir:  
   
