@@ -1,0 +1,111 @@
+---
+title: "Usando todo o poder do Gherkin 2/2"
+layout: post
+date: 2017-02-15 16:20
+tag:
+- Cucumber
+- Feature
+- BDD
+blog: true
+star: false
+---
+  
+No primeiro post entendemos oque é o Gherkin, porque ele foi criado e o básico para você sair escrevendo seus arquivos `*.feature`.
+Nest post você verá algumas outras armas do Gherkin que tornarão o seu desenvolvimento mais produtivo e eficiente.
+Estas dicas são super simples, mas é difícil verem elas em uso, pois a maioria das pessoas desconhece ou tem preguiça de utilizá-las.  Vamos a elas!
+  
+  
+# Contexto  
+  
+Algumas vezes, para testar uma funcionalidade você precisará repetir uma coleção de steps antes de cada cenário. Vamos supor que em todos os seus cenários você precisará cadastrar um usuário e sabemos que não será muito eficiente ficar duplicando estas steps em todos os cenários, então podemos utilizar o Contexto para executar um conjunto de steps antes de cada cenário.  
+  
+Exemplo:  
+  
+```Gherkin
+Contexto:
+    Dado que eu esteja deslogado na página inicial
+
+Cenário: Usuário deslogado tenta publicar no blog
+	Quando eu tentar postar em "Terapia Cara"
+	Então eu devo ver "Você deverá se logar para publicar"
+
+Cenário: Wilson posta em seu próprio blog
+    Dado que eu realize o login como Wilson
+    Quando eu tentar postar em "Terapia Cara"
+    Então eu devo ver "Seu artigo foi publicado."
+```
+  
+Neste exemplo seria como se o `Dado` fosse a primeira step de cada Cenário, ele será executado antes de cada Cenário.  
+  
+  
+# Esquema do Cenário  
+  
+Copiar e colar cenários inteiros somente para usar diferentes valores pode ser muito tedioso, repetitivo e ineficiente e é por isso que temos os `Esquemas do Cenário`, com ele podemos escrever o cenário apenas uma vez e informar as diferentes `massas` que queremos para reutilizá-lo.  
+  
+O Esquema do Cenário utiliza espaços reservados, que estão contidos entre `< >` nas steps do Cenário.
+Pense em um espaço reservado como uma variável, que receberá um valor das linhas da tabela de `Exemplos:`, onde o texto entre os `< >` corresponde ao cabeçalho da coluna da tabela de exemplos. O valor muda a cada execução subsequente do Esquema do Cenário, até que o fim da tabela seja alcançado.
+Ou seja, o código abaixo será executado duas vezes, sendo que na primeira execução utilizará os valores da primeira linha e na próxima execução serão utilizados os valores da segunda linha.  
+  
+```Gherkin
+Esquema do Cenário: Comendo
+  Dado que tenho <antes> pepinos
+  Quando eu comer <come> pepinos
+  Então eu devo ter <depois> pepinos
+
+  Exemplos:
+    | antes | come | depois |
+    |  12   |  5   |   7    |
+    |  20   |  5   |   15   |
+
+Então na primeira execução, o que realmente será executado é:
+
+Cenário: Comer
+  Dado que temos 12 pepinos
+  Quando eu comer 5 pepino
+  Então teremos 7 pepinos
+```
+  
+  
+# Argumentos Multilineos  
+  
+Até agora vimos steps de linha única, mas há momentos em que você quer passar uma estrutura de dados mais rica para uma step.  Para isto que existem os Argumentos Multilineos, que podem ser escritos de dois modos: `Tabelas` ou `Pystrings`.  
+  
+## Tabelas  
+As tabelas são úteis para a especificação de um grande conjunto de dados - normalmente como entrada para uma saída de `Dado` ou como uma espera de um `Então`.  
+  
+```Gherkin
+Cenário:
+  Dado que as seguintes pessoas existem:
+    | nome    | email             | fone  |
+    | Diego   | diego@email.com   | 123   |
+    | Santos  | santos@email.com  | 234   |
+    | Machado | machado@email.org | 456   |
+```
+
+## Pystrings  
+São strings multineas utilizadas para a especificação de um grande pedaço de texto. O texto deve ser fechado por delimitadores que consistem em três marcas de aspas duplas colocadas em linha `"""`  
+  
+```Gherkin
+Cenário:
+  Dado uma postagem em um blog chamado "Random" com:
+    """
+    Algum título, Eh?
+    =================
+    Aqui está o primeiro parágrafo do meu post.
+    Lorem ipsum dolor sit amet, consectetur adipiscing
+    elit.
+    """
+```
+  
+# Tags  
+  
+Você pode usar tags para agrupar Funcionalidades e Cenários, independente da estrutura do seu arquivo e diretório, elas são uma ótima forma de organizar as suas funcionalidades e cenários.  
+Um Cenário ou Funcionalidade pode ter quantas tags você quiser, basta apenas separá-los com espaços:  
+  
+```Gherkin
+@faturamento @brigar @incomodar
+Funcionalidade: Verificar o faturamento
+	
+	@ci
+  	Cenário: Falta da descrição do produto
+```
