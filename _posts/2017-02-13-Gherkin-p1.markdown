@@ -76,8 +76,6 @@ Cenário: Uma situação diferente`
 Inicia o próximo cenário.  
   
   
-===
-  
   
 Agora vamos ver os detalhes de cada uma destas partes:  
   
