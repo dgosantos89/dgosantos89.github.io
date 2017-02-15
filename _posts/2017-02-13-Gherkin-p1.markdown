@@ -13,7 +13,7 @@ star: false
 Vez por outra vejo pessoas empolgadas, falando sobre o surgimento de linguagens com sintaxe tão natural que em breve qualquer pessoa poderá programar sem dificuldades.  
 Essas pessoas estão certas, realmente existem diversas linguagens surgindo com este intuito, mas oque você provavelmente não sabe é que esta não é uma ideia nova, o próprio COBOL (COmmon Business Oriented Language) foi criado com este intuito e você sabe oque aconteceu depois.  
 
-Neste post falaremos sobre uma linguagem que vem sendo amplamente utilizada no intuito de tornar mais fácil a comunicação entre os desenvolvedores, a área de negócios e outras partes interessadas, uma linguagem tão natural que qualquer um destes pode entender e até mesmo escrever, a Gherkin.
+Aqui falaremos sobre uma linguagem que vem sendo amplamente utilizada no intuito de tornar mais fácil a comunicação entre os desenvolvedores, a área de negócios e outras partes interessadas, uma linguagem tão natural que qualquer um destes pode entender e até mesmo escrever, a Gherkin.
   
 Gherkin é uma Business Readable, Domain Specific Language criada especificamente para a descrição de comportamentos, com a habilidade de remover detalhes lógicos dos testes, que serve como documentação do projeto e para automação de testes, usando uma linguagem verdadeira e humana que lhe diz o código que você deve escrever.  
   
@@ -55,25 +55,32 @@ Em outras palavras, se você fala Francês, você pode usar a palavra `Fonctionn
 Então nunca se esqueça de explicitar a língua utilizada no início do seu arquivo *.feature.
 
 No demais, o código é dividido em três partes: `Funcionalidades`, `Cenários` e `Steps`.  
-  
-`Funcionalidade: Algum texto descritivo conciso do que é desejado.`  
-  
+
+```Gherkin
+Funcionalidade: Algum texto descritivo conciso do que é desejado.
+```
 Inicia a feature e lhe dá um título.  
 Seguido por três linhas (A fim de... Como um... Eu quero...).  
   
   
-`Cenário: Uma determinada situação de negócios`  
-  
+```Gherkin
+Cenário: Uma determinada situação de negócios  
+```
 Contém uma descrição do cenário.  
 As próximas 7 linhas são as chamadas steps do cenário.  
   
   
-`Cenário: Uma situação diferente`  
-  
+```Gherkin
+Cenário: Uma situação diferente`  
+```
 Inicia o próximo cenário.  
   
   
+===
+  
+  
 Agora vamos ver os detalhes de cada uma destas partes:  
+  
   
 # Funcionalidades
 
