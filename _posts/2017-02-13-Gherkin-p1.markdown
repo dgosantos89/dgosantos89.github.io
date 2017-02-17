@@ -9,7 +9,11 @@ tag:
 blog: true
 star: false
 ---
-
+  
+![Gherkin](http://i66.tinypic.com/2116o94.png)
+  
+  
+  
 Vez por outra vejo pessoas empolgadas, falando sobre o surgimento de linguagens com sintaxe tão natural que em breve qualquer pessoa poderá programar sem dificuldades.  
 Essas pessoas estão certas, realmente existem diversas linguagens surgindo com este intuito, mas oque você provavelmente não sabe é que esta não é uma ideia nova, o próprio COBOL (COmmon Business Oriented Language) foi criado com este intuito e você sabe oque aconteceu depois.  
 
@@ -19,6 +23,7 @@ Gherkin é uma Business Readable, Domain Specific Language criada especificament
   
 Neste primeiro post entenderemos melhor a sua estrutura básica e a melhor forma de a utilizarmos e no próximo post teremos alguns detalhes mais avançados que dificilmente você viu sendo aplicado por ai.
   
+    
   
 Sintaxe Gherkin
 ===============
