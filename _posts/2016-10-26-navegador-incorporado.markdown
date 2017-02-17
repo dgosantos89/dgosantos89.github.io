@@ -10,11 +10,14 @@ blog: true
 star: false
 ---
   
+![App](http://i66.tinypic.com/k0pbp.jpg)
+  
+  
 Como automatizá-la?
 ===================
   
   
-Recentemente me deparei com um objeto de navegador incorporado em uma aplicação.  
+Recentemente me deparei com um objeto de navegador incorporado em uma aplicação desktop, como no exemplo acima, onde temos um navegador incorporado em uma planilha excel.  
 Eu era capaz apenas de identificá-lo como um WinObject `navegador`,  
 então não era possível acessar o conteúdo dentro desta página.  
   
