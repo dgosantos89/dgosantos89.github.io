@@ -10,6 +10,10 @@ blog: true
 star: false
 ---
   
+  
+![Gherkin](http://i66.tinypic.com/2116o94.png)
+  
+  
 No primeiro post entendemos oque é o Gherkin, porque ele foi criado e o básico para você sair escrevendo seus arquivos `*.feature`.
 Nest post você verá algumas outras armas do Gherkin que tornarão o seu desenvolvimento mais produtivo e eficiente.
 Estas dicas são super simples, mas é difícil verem elas em uso, pois a maioria das pessoas desconhece ou tem preguiça de utilizá-las.  Vamos a elas!
