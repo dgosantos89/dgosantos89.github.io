@@ -1,0 +1,103 @@
+---
+title: "Como melhorar a comunicação usando BDD"
+layout: post
+date: 2019-02-20 16:20
+tag:
+- Cucumber
+- BDD
+blog: true
+star: false
+---
+   
+	O que é mais difícil: Automatizar, escrever os cenários ou 
+	entender o que o PO quer e elencar as regras de negócios e os requisitos não funcionais? 
+ 
+##Todos temos problemas de comunicação 
+ 
+Você pode pensar que não, mas todos temos problemas de comunicação nos nossos times. Temos dificuldades de ver como um todo o que será construído, entender as necessidades de negócios que devem ser atendidas e do outro lado temos a área de negócios que não consegue entender os desafios técnicos que teremos na implementação. 
+Isto é normal, já que times ágeis são multidiciplinares. Onde cada um tem um perfil, uma visão diferente do problema e de como atacá-lo, é normal que cada um interprete a estória do seu jeito. 
+ 
+###Os três amigos 
+ 
+PO - Qual problemas estamos tentando resolver?  
+DEV - Como podemos construir uma solução para resolver?  
+QE - O que poderia acontecer?  
+ 
+Uma forma de aproveitar ao máximo os diferentes perfis e alinhar o entendimento é a técnica Os três amigos (Story Kick Off huddles ou the Triad). Esta técnica consiste que todos os interessados sentem juntos e definam o que fazer e concordar sobre como elas sabem que isto foi feito corretamente. 
+Ao final temos uma descrição mais clara, muitas vezes na forma de exemplos, levando ao entendimento compartilhado. 
+ 
+##Alguém já passou por isso e pensou em uma forma de melhorar este GAP 
+ 
+Óbvio que um problema tão comum já foi analisado por vários especialistas e geraram várias soluções, como a técnica dos três amigos e a ideia de termos as especificações em forma de exemplos utilizando uma linguagem ubíqua (DDD - Domain Driven Design). Dan North se utilizou destas técnicas e mais algumas como TDD e ATDD para criar o BDD. 
+  
+TDD - O código está correto e é fácil de ser testado? [Foco no design do código] 
+ATDD - O código faz o que é suposto que ele faça? [Foco em validar se foi entregue o que era suposto ser entregue] 
+BDD é a evolução destes dois trazendo o foco para a comunicação. 
+A principal diferença entre BDD e TDD é que no BDD estamos em um nível de abstração mais alto, mais próximo do domínio e mais distante dos métodos.  
+ 
+###Origem 
+ 
+	2003 - Agiledox
+		Ferramenta que gera documentação técnica automaticamente a partir de testes JUnit
+ 
+	2004 - JBehave
+		Ferramenta para testar comportamentos
+ 
+	2006 - Formado given-when-then
+		O formato Dado-Quando-Então é finalmente documentado no post "Introducing BDD" de Dan North
+ 
+###Definição 
+ 
+BDD é uma abordagem que faz com que um time desenvolva software falando uma mesma línga, entregando valor para o cliente, se utilizando de cenários e por consequência automatizando testes. 
+Ou seja BDD não é só escrever cenários ou só automação de testes, BDD é isso e mais um pouco. 
+O objetivo do BDD é descobrir mal entendidos e descobri-los cedo! 
+ 
+##Com melhorar a comunicação do time com BDD? 
+ 
+###Benefícios do BDD 
+ 
+Deixa claro para todos o que deve ser feito, antes de ser feito 
+Expõe o tamanho e a complexidade da história com base no número de cenários que escrevemos 
+Garante uma documentação viva 
+Torna as especificações executáveis 
+Traz empatia a todos os envolvidos 
+ 
+###Como? 
+BDD se apóia no uso de um vocabulário pequeno, minimizando ruídos na comunicação de forma que todos os envolvidos falem a mesma línguagem.  
+
+####Gherkin
+
+A cada dia vemos novas linguagens surgindo buscando alcançar uma linguagem mais natural, mas isto não é uma novidade. Na verdade o próprio COBOL (sigla de COmmon Business Oriented Language) [Linguagem Comum Orientada para os Negócios] foi criado com este intuito. 
+No BDD usamos a linguagem Gherkin, uma linguagem realmente ubíqua, para descrever as estórias utilizando exemplos. 
+
+	Dado que <pré-condições para que ocorram a ação do interesse do cenário>
+	Quando <eventos que devem ocorrer para que o cenário seja executado>
+	Então <expectativas a respeito dos resultados em função da execução dos eventos do cenário>
+
+##Erros Comuns no uso do BDD
+
+- O PO deve escrever os cenários
+Alguns times acreditam que somente o PO deve escrever os cenários e as descrições das estórias. Todos podem escrever os cenários, aliás é uma tarefa que devemos fazer juntos.  
+ 
+- Não transforme tudo em testes 
+A regra segue a mesma pra qualquer outra técnica de testes, utilize quando necessário. 
+ 
+- Evite detalhes de implementação, foque no "QUE" e não no "COMO"  
+Nos cenários evite detalhes técnicos, busque manter sempre um alto nível de abstração. Afinal estes cenários também são uma documentação não técnica, então tente sempre escrever cenários que qualquer pessoa que não esteja familiarizada com o seu produto consiga entender as regras de negócio atreladas.  
+
+##
+
+	Your cucumber features should drive your implementation, not reflect it 
+
+##
+
+##Conclusão 
+ 
+ 
+ 
+###Fontes:
+
+http://broncodev.com/2016-10-11-introduzindo-o-bdd/  
+https://www.agilealliance.org/glossary/bdd/  
+https://www.agilealliance.org/glossary/three-amigos/  
+https://docs.cucumber.io/guides/bdd-tutorial/  
