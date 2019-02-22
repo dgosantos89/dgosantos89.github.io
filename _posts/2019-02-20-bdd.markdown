@@ -103,7 +103,7 @@ Nos cenários evite detalhes técnicos, busque manter sempre um alto nível de a
   
 ## Conclusão  
   
-Com as especificações escritas, você deve automatizá-las para ter o feedback imagiato sobre o que ainda falta ser feito para atender aos requisitos e o que está com defeito, iniciando assim o fluxo de `Red, Green, Refactor` igual ao TDD, mas desta vez focando nos comportamentos escritos em conjunto com todos os stakeholders. Ao final temos uma documentação executável que prova que todos os critérios foram atendidos e funcionam.  
+Com as especificações escritas, você deve automatizá-las para ter o feedback imediato sobre o que ainda falta ser feito para atender aos requisitos e o que está com defeito, iniciando assim o fluxo de `Red, Green, Refactor` igual ao TDD, mas desta vez focando nos comportamentos escritos em conjunto com todos os stakeholders. Ao final temos uma documentação executável que prova que todos os critérios foram atendidos e funcionam.  
   
 ### Fontes:
   
