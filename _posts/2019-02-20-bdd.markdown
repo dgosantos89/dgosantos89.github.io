@@ -19,7 +19,7 @@ star: false
 ## Todos temos problemas de comunicação 
  
 Você pode pensar que não, mas todos temos problemas de comunicação nos nossos times. Temos dificuldades de ver como um todo o que será construído, entender as necessidades de negócios que devem ser atendidas e do outro lado temos a área de negócios que não consegue entender os desafios técnicos que teremos na implementação.  
-Isto é normal, já que times ágeis são multidisciplinares. Onde cada um tem um perfil, uma visão diferente do problema e de como atacá-lo, é normal que cada um interprete a estória do seu jeito.  
+Isto é normal, já que times ágeis são multidisciplinares. Onde cada um tem um perfil, uma visão diferente do problema e de como atacá-lo, é normal que cada um interprete a história do seu jeito.  
  
 ### Os três amigos 
  
@@ -78,7 +78,7 @@ BDD se apoia no uso de um vocabulário pequeno, minimizando ruídos na comunica�
 #### Gherkin 
  
 A cada dia vemos novas linguagens surgindo buscando alcançar uma linguagem mais natural, mas isto não é uma novidade. Na verdade o próprio COBOL (sigla de COmmon Business Oriented Language) [Linguagem Comum Orientada para os Negócios] foi criado com este intuito.  	
-No BDD usamos a linguagem Gherkin, uma linguagem realmente ubíqua, para descrever as estórias utilizando exemplos.  
+No BDD usamos a linguagem Gherkin, uma linguagem realmente ubíqua, para descrever as história utilizando exemplos.  
  
 ```Gherkin
 	Dado que <pré-condições para que ocorram a ação do interesse do cenário>
@@ -89,7 +89,7 @@ No BDD usamos a linguagem Gherkin, uma linguagem realmente ubíqua, para descrev
 ## Erros Comuns no uso do BDD 
  
 - O PO deve escrever os cenários  
-Alguns times acreditam que somente o PO deve escrever os cenários e as descrições das estórias. Todos podem escrever os cenários, aliás é uma tarefa que devemos fazer juntos.  
+Alguns times acreditam que somente o PO deve escrever os cenários e as descrições das histórias. Todos podem escrever os cenários, aliás é uma tarefa que devemos fazer juntos.  
   
 - Não transforme tudo em testes  
 A regra segue a mesma pra qualquer outra técnica de testes, utilize quando necessário.  
