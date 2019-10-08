@@ -11,7 +11,7 @@ star: false
 ---
   
   
-![Gherkin](http://i66.tinypic.com/2116o94.png)
+![Gherkin](http://kplod.com/wp-content/uploads/2016/04/pepinillos-300x131.png)
   
   
 No primeiro post entendemos oque é o Gherkin, porque ele foi criado e o básico para você sair escrevendo seus arquivos `*.feature`.
