@@ -1,8 +1,9 @@
 ---
-title: "Dolly 2"
-layout: post
+title: ""
+layout: page
 date: 2019-10-18 16:20
 tag:
+- Dolly
 blog: false
 star: false
 ---
