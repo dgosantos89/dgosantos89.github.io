@@ -1,0 +1,10 @@
+---
+title: "Dolly 2"
+layout: post
+date: 2019-10-18 16:20
+tag:
+blog: false
+star: false
+---
+
+![Dollly1](/assets/images/dolly2.png)
