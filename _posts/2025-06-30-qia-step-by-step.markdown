@@ -24,17 +24,16 @@ Pré-requisitos
 - Chave da OpenAI (ou outro provedor LLM)
 - Conta no ngrok (opcional para testes locais)
 
-1. Clone o projeto
-------------------
+### 1. Clone o projeto
 
-```
+```bash
 git clone https://github.com/dgosantos89/qia-slackbot.git
 cd qia-slackbot
 npm install
 ```
 
-2. Crie seu app no Slack
-------------------------
+### 2. Crie seu app no Slack
+
 
 1. Acesse https://api.slack.com/apps
 2. Clique em "Create New App > From scratch"
@@ -51,12 +50,11 @@ npm install
    - Use uma URL do ngrok com /slack/events (ver abaixo)
    - Adicione o evento: app_mention
 
-3. Configure o .env
--------------------
+### 3. Configure o .env
 
 Crie um arquivo `.env` na raiz do projeto com o seguinte conteúdo:
 
-```
+```YAML
 SLACK_BOT_TOKEN=xoxb-...
 SLACK_SIGNING_SECRET=...
 OPENROUTER_API_KEY=org-...
@@ -65,8 +63,7 @@ OPENROUTER_BASE_URL=https://openrouter.ai/api/v1
 OPENROUTER_MODEL=mistralai/mistral-7b-instruct:free
 ```
 
-4. Rode localmente com ngrok
-----------------------------
+### 4. Rode localmente com ngrok
 
 Em um terminal:
 
@@ -80,8 +77,8 @@ Copie a URL do ngrok e use em "Event Subscriptions" no Slack:
 
 https://abc123.ngrok.io/slack/events
 
-5. Teste no Slack
------------------
+
+### 5. Teste no Slack
 
 No canal onde o app está instalado, mencione o bot:
 
@@ -93,8 +90,7 @@ O bot irá responder com sugestões de testes, aplicando técnicas como:
 - Fluxos alternativos
 - Casos negativos
 
-6. Deploy (exemplo com Docker)
-------------------------------------------
+### 6. Deploy (exemplo com Docker)
 
 Você pode criar uma imagem Docker do QiA e fazer o deploy em qualquer ambiente com suporte a containers, como:
 
@@ -105,20 +101,18 @@ Você pode criar uma imagem Docker do QiA e fazer o deploy em qualquer ambiente 
 
 > Basta garantir que a aplicação esteja acessível publicamente e exponha o endpoint /slack/events para o Slack.
 
-7. Contribua!
--------------
+### 7. Contribua!
 
 O QiA é um projeto em evolução. Se você quiser testar, melhorar, adaptar ou sugerir algo, acesse:
 
 https://github.com/dgosantos89/qia-slackbot
 
 
-8. Rode com Docker (alternativa ao Node local)
-----------------------------------------------
+### 8. Rode com Docker (alternativa ao Node local)
 
 Se preferir, você pode rodar o QiA com Docker, sem precisar instalar dependências localmente.
 
-### Usando Docker Compose
+## Usando Docker Compose
 
 O repositório já inclui um `docker-compose.yml` pronto. Basta executar:
 
